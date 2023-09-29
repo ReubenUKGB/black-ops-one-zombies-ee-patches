@@ -1,0 +1,17 @@
+rawfile,maps/_zombiemode_ai_astro.gsc
+rawfile,maps/_zombiemode_ai_faller.gsc
+rawfile,maps/_zombiemode_ai_quad.gsc
+rawfile,maps/_zombiemode_equip_gasmask.gsc
+rawfile,maps/_zombiemode_jump_pad.gsc
+rawfile,maps/_zombiemode_weap_black_hole_bomb.gsc
+rawfile,maps/zombie_moon.gsc
+rawfile,maps/zombie_moon_achievement.gsc
+rawfile,maps/zombie_moon_digger.gsc
+rawfile,maps/zombie_moon_ffotd.gsc
+rawfile,maps/zombie_moon_gravity.gsc
+rawfile,maps/zombie_moon_sq.gsc
+rawfile,maps/zombie_moon_teleporter.gsc
+rawfile,maps/zombie_moon_wasteland.gsc
+rawfile,clientscripts/_zombiemode_equip_gasmask.csc
+rawfile,clientscripts/_zombiemode_weap_black_hole_bomb.csc
+rawfile,clientscripts/_zombie_moon_fx.csc

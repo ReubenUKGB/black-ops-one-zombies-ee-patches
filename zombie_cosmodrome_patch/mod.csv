@@ -1,0 +1,10 @@
+rawfile,maps/_zombiemode_weap_black_hole_bomb.gsc
+rawfile,maps/zombie_cosmodrome.gsc
+rawfile,maps/zombie_cosmodrome_ai_monkey.gsc
+rawfile,maps/zombie_cosmodrome_eggs.gsc
+rawfile,maps/zombie_cosmodrome_ffotd.gsc
+rawfile,maps/zombie_cosmodrome_lander.gsc
+rawfile,maps/zombie_cosmodrome_magic_box.gsc
+rawfile,clientscripts/_zombiemode_weap_black_hole_bomb.csc
+rawfile,clientscripts/zombie_cosmodrome.csc
+rawfile,clientscripts/zombie_cosmodrome_ffotd.csc

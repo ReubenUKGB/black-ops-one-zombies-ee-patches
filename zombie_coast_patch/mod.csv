@@ -1,0 +1,11 @@
+rawfile,maps/_zombiemode_ai_director.gsc
+rawfile,maps/_zombiemode_player_zipline.gsc
+rawfile,maps/zombie_coast.gsc
+rawfile,maps/zombie_coast_achievement.gsc
+rawfile,maps/zombie_coast_ai_director.gsc
+rawfile,maps/zombie_coast_amb.gsc
+rawfile,maps/zombie_coast_eggs.gsc
+rawfile,maps/zombie_coast_ffotd.gsc
+rawfile,maps/zombie_coast_flinger.gsc
+rawfile,clientscripts/_zombiemode_ai_director.csc
+rawfile,clientscripts/zombie_coast_ffotd.csc
