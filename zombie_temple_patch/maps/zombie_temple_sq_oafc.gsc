@@ -31,7 +31,7 @@ init()
 
 stage_logic()
 {
-
+	/#
 	
 	flag_wait("oafc_switch_pressed");
 	
@@ -47,7 +47,7 @@ stage_logic()
 		return;		
 	}
 
-
+	#/
 }
 
 oafc_switch()
@@ -330,7 +330,7 @@ oafc_trigger_thread(tiles, set)
 	flag_wait("oafc_switch_pressed");
 	
 	self trigger_on();
-	
+
 	while(1)
 	{
 		for(i = 0; i < tiles.size; i ++)
@@ -354,6 +354,8 @@ oafc_trigger_thread(tiles, set)
 					tile SetModel(tile.tile);
 					tile playsound( "evt_sq_oafc_glyph_activate" );
 					
+					wait(5.0);
+					
 					matched = false;
 					
 					if(set == 1)
@@ -364,10 +366,14 @@ oafc_trigger_thread(tiles, set)
 					{
 						level._picked_tile2 = tile;
 					}
+
+					tile_activated = true; // Flag to track tile activation
+                    activation_time = GetTime() + 1000; // Record activation time
 					
-					while(IsDefined(touched_player) && self IsTouching(touched_player) && touched_player.sessionstate != "spectator" && !tile.matched)
+					while(IsDefined(touched_player) && tile_activated == true && touched_player.sessionstate != "spectator" && !tile.matched)
 					{
 						self.touched_player = touched_player;
+						
 						if(set == 1)
 						{
 							if(IsDefined(level._picked_tile1) && IsDefined(level._picked_tile2))
@@ -428,6 +434,8 @@ oafc_trigger_thread(tiles, set)
 										flag_wait("oafc_plot_vo_done");
 										wait(5.0);
 										
+										tile_activated = false;
+
 										stage_completed("sq", "OaFC");
 										return;
 									}
@@ -451,7 +459,7 @@ oafc_trigger_thread(tiles, set)
 									{
 										level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
 									}
-									
+
 									while(IsDefined(touched_player) && self IsTouching(touched_player) && IsDefined(level._picked_tile2))
 									{
 										wait(0.05);
@@ -459,10 +467,20 @@ oafc_trigger_thread(tiles, set)
 
 									PrintLn("Breaking out of unmatched.");
 																	
-									level thread reset_tiles();	// will end trigger threads - threads recreated by reset_tiles
+									level thread reset_tiles();	// will end trigger threads - threads recreated by reset_tiles									
 					
 									break;
 								}
+							}
+						}
+
+						players = getPlayers();
+
+						if ( players.size <= 3 )
+						{	
+							if (GetTime() >= activation_time + 94000 || touched_player getStance() == "crouch")
+							{
+								tile_activated = false; // Deactivate the tile
 							}
 						}
 												
