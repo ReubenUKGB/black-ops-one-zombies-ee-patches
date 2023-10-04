@@ -589,7 +589,7 @@ oafc_trigger_thread(tiles, set)
 
 							if ( players.size == 1 )
 							{	
-								if (GetTime() >= activation_time + 94000 || touched_player getStance() == "crouch")
+								if (GetTime() >= activation_time + 99000 || touched_player getStance() == "crouch")
 								{
 									tile_activated = false; // Deactivate the tile
 								}
