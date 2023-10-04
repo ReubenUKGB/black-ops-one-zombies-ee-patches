@@ -1166,12 +1166,13 @@ give_player_model_override( entity_num )
 	{
 		level._override_num_chars_connected ++;
 	}
-	
+
 	if( IsDefined( self.zm_random_char ) )
 	{
 		entity_num = self.zm_random_char;
 		self.entity_num = entity_num;
-	}	
+	}
+	
 	else if(level._override_num_chars_connected == (GetNumExpectedPlayers() -1 ) )
 	{
 		self.zm_random_char = 3;
@@ -1183,6 +1184,15 @@ give_player_model_override( entity_num )
 		self.zm_random_char = level._override_num_chars_connected;
 		self.entity_num = level._override_num_chars_connected;
 		entity_num = level._override_num_chars_connected;
+	}
+
+	players = getPlayers();
+
+	if (players.size == 1)
+	{
+		self.zm_random_char = 3;
+		self.entity_num = 3;
+		entity_num = 3;
 	}
 	
 	switch( entity_num )
@@ -1213,6 +1223,13 @@ player_set_viewmodel_override( entity_num )
 	else
 	{
 		entity_num = self.entity_num;
+	}
+
+	players = getPlayers();
+
+	if (players.size == 1)
+	{
+		entity_num = 3;
 	}
 
 	switch( entity_num )
@@ -1295,6 +1312,13 @@ gasmask_reset_player_model( entity_num )
 		entity_num = self.zm_random_char;
 	}
 
+	players = getPlayers();
+
+	if (players.size == 1)
+	{
+		entity_num = 3;
+	}
+
 	self Detach(self.headModel, "");
 
 	switch( entity_num )
@@ -1319,6 +1343,13 @@ gasmask_reset_player_set_viewmodel( entity_num )
 	if( IsDefined( self.zm_random_char ) )
 	{
 		entity_num = self.zm_random_char;
+	}
+
+	players = getPlayers();
+
+	if (players.size == 1)
+	{
+		entity_num = 3;
 	}
 	
 	switch( self.entity_num )
@@ -1676,7 +1707,7 @@ setup_water_physics()
 	flag_wait( "all_players_connected" );
 	players = GetPlayers();
 	for (i = 0; i < players.size; i++)
-  {
+  	{
 		players[i] SetClientDvars("phys_buoyancy",1);
 	}
 }

@@ -165,11 +165,18 @@ init_sidequest()
 	{
 		entnum = players[i] GetEntityNumber();
 		PrintLn("**** entnum " + entnum);
-		
+
 		if( IsDefined( players[i].zm_random_char ) )
 		{
 			entnum = players[i].zm_random_char;
-		}		
+		}
+		
+		players = getPlayers();
+
+		if (players.size == 1)
+		{
+			entnum = 3;
+		}	
 				
 		if((entnum == 3))
 		{	
@@ -449,12 +456,19 @@ get_specific_player( num )
 	for(i = 0; i < players.size; i ++)
 	{
 		ent_num = players[i] GetEntityNumber();
-		
+
 		if(IsDefined(players[i].zm_random_char))
 		{
 			ent_num = players[i].zm_random_char;
 		}
-		
+
+		players = getPlayers();
+
+		if (players.size == 1)
+		{
+			ent_num = 3;
+		}
+
 		if(ent_num == num)
 		{
 			return players[i];

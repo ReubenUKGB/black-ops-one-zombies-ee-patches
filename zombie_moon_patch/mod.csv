@@ -14,4 +14,4 @@ rawfile,maps/zombie_moon_teleporter.gsc
 rawfile,maps/zombie_moon_wasteland.gsc
 rawfile,clientscripts/_zombiemode_equip_gasmask.csc
 rawfile,clientscripts/_zombiemode_weap_black_hole_bomb.csc
-rawfile,clientscripts/_zombie_moon_fx.csc
+rawfile,clientscripts/zombie_moon_fx.csc
