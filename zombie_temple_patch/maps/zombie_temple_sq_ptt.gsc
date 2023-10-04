@@ -23,7 +23,7 @@ init()
 	flag_init("ptt_plot_vo_done");
 	
 	declare_sidequest_stage("sq", "PtT", ::init_stage, ::stage_logic, ::exit_stage);
-	set_stage_time_limit("sq", "PtT", 5 * 60);	// 5 minute limit.
+	set_stage_time_limit("sq", "PtT", 10 * 60);	// 5 minute limit.
 	declare_stage_asset_from_struct("sq", "PtT", "sq_ptt_trig", ::gas_volume, ::volume_trigger_thread);
 	
 //	declare_stage_title("sq", "PtT", &"ZOMBIE_TEMPLE_SIDEQUEST_STAGE_4_TITLE");

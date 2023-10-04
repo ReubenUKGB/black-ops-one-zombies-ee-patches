@@ -25,7 +25,7 @@ init()
 	level._on_plate = 0;
 	
 	declare_sidequest_stage("sq", "DgCWf", ::init_stage, ::stage_logic, ::exit_stage);
-	set_stage_time_limit("sq", "DgCWf", 5 * 60);	// 5 minute limit.
+	set_stage_time_limit("sq", "DgCWf", 10 * 60);	// 5 minute limit.
 //	declare_stage_title("sq", "DgCWf", &"ZOMBIE_TEMPLE_SIDEQUEST_STAGE_2_TITLE");
 	declare_stage_asset_from_struct("sq", "DgCWf", "sq_dgcwf_sw1", ::sw1_thread, ::sw1_press);
 	declare_stage_asset("sq", "DgCWf", "sq_dgcwf_trig", ::plate_trigger);

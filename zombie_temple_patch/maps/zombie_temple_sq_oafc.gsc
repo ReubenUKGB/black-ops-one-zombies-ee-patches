@@ -19,7 +19,7 @@ init()
 {
 	PreCacheModel("p_ztem_glyphs_00");
 	declare_sidequest_stage("sq", "OaFC", ::init_stage, ::stage_logic, ::exit_stage);
-	set_stage_time_limit("sq", "OaFC", 5 * 60);	// 5 minute limit.
+	set_stage_time_limit("sq", "OaFC", 10 * 60);	// 5 minute limit.
 //	declare_stage_title("sq", "OaFC", &"ZOMBIE_TEMPLE_SIDEQUEST_STAGE_1_TITLE");
 	declare_stage_asset_from_struct("sq", "OaFC", "sq_oafc_switch", ::oafc_switch);
 	declare_stage_asset_from_struct("sq", "OaFC", "sq_oafc_tileset1", ::tileset1, maps\_zombiemode_sidequests::radius_trigger_thread);
@@ -369,122 +369,242 @@ oafc_trigger_thread(tiles, set)
 
 					tile_activated = true; // Flag to track tile activation
                     activation_time = GetTime() + 1000; // Record activation time
-					
-					while(IsDefined(touched_player) && tile_activated == true && touched_player.sessionstate != "spectator" && !tile.matched)
+
+					players = getPlayers();
+
+					if (players.size => 2)
 					{
-						self.touched_player = touched_player;
-						
-						if(set == 1)
+						while(IsDefined(touched_player) && self IsTouching(touched_player) && touched_player.sessionstate != "spectator" && !tile.matched)
 						{
-							if(IsDefined(level._picked_tile1) && IsDefined(level._picked_tile2))
+							self.touched_player = touched_player;
+							if(set == 1)
 							{
-								if(level._picked_tile1.tile == level._picked_tile2.tile)
+								if(IsDefined(level._picked_tile1) && IsDefined(level._picked_tile2))
 								{
-									level._picked_tile1 playsound( "evt_sq_oafc_glyph_correct" );
-									level._picked_tile2 playsound( "evt_sq_oafc_glyph_correct" );
-									
-									matched = true;
-									level._picked_tile1.matched = true;								
-									level._picked_tile2.matched = true;			
-													
-									level._picked_tile1 moveto(level._picked_tile1.origin - (0,0,24), 0.5);
-									level._picked_tile2 moveto(level._picked_tile2.origin - (0,0,24), 0.5);
-	
-									level._picked_tile1 waittill("movedone");
-	
-									level._picked_tile1 = undefined;
-									level._picked_tile2 = undefined;
-									
-									level._num_matched_tiles ++;
-									
-									if( level._num_matched_tiles < level._num_tiles_to_match )
+									if(level._picked_tile1.tile == level._picked_tile2.tile)
 									{
-										rand = randomintrange(0,2);
+										level._picked_tile1 playsound( "evt_sq_oafc_glyph_correct" );
+										level._picked_tile2 playsound( "evt_sq_oafc_glyph_correct" );
 										
+										matched = true;
+										level._picked_tile1.matched = true;								
+										level._picked_tile2.matched = true;			
+														
+										level._picked_tile1 moveto(level._picked_tile1.origin - (0,0,24), 0.5);
+										level._picked_tile2 moveto(level._picked_tile2.origin - (0,0,24), 0.5);
+		
+										level._picked_tile1 waittill("movedone");
+		
+										level._picked_tile1 = undefined;
+										level._picked_tile2 = undefined;
+										
+										level._num_matched_tiles ++;
+										
+										if( level._num_matched_tiles < level._num_tiles_to_match )
+										{
+											rand = randomintrange(0,2);
+											
+											if( isdefined( touched_player ) && rand == 0 )
+											{
+												touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											}
+											else if( isdefined( level._oafc_trigger2.touched_player ) )
+											{
+												level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											}
+										}
+										
+										if(level._num_matched_tiles == level._num_tiles_to_match)
+										{
+											struct = getstruct( "sq_location_oafc", "targetname" );
+											if( isdefined( struct ) )
+											{
+												playsoundatposition( "evt_sq_oafc_glyph_complete", struct.origin );
+												playsoundatposition( "evt_sq_oafc_kachunk", struct.origin );
+											}
+											//tile playsound( "evt_sq_oafc_glyph_complete" );
+											//tile playsound( "evt_sq_oafc_kachunk" );
+											
+											if( isdefined( touched_player ) )
+											{
+												//touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, 8 );
+											}
+											
+											level notify( "suspend_timer" );
+											level notify("raise_crystal_1", true);
+											level waittill("raised_crystal_1");
+											
+											flag_wait("oafc_plot_vo_done");
+											wait(5.0);
+											
+											stage_completed("sq", "OaFC");
+											return;
+										}
+										
+										PrintLn("breaking out of match");
+										
+										break;
+									}
+									else
+									{
+										level._picked_tile1 playsound( "evt_sq_oafc_glyph_wrong" );
+										level._picked_tile2 playsound( "evt_sq_oafc_glyph_wrong" );
+										
+										rand = randomintrange(0,2);
+											
 										if( isdefined( touched_player ) && rand == 0 )
 										{
-											touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
 										}
 										else if( isdefined( level._oafc_trigger2.touched_player ) )
 										{
-											level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
 										}
-									}
-									
-									if(level._num_matched_tiles == level._num_tiles_to_match)
-									{
-										struct = getstruct( "sq_location_oafc", "targetname" );
-										if( isdefined( struct ) )
+
+										while(IsDefined(touched_player) && self IsTouching(touched_player) && IsDefined(level._picked_tile2))
 										{
-											playsoundatposition( "evt_sq_oafc_glyph_complete", struct.origin );
-											playsoundatposition( "evt_sq_oafc_kachunk", struct.origin );
+											wait(0.05);
+
+											if ( getplayers().size <= 3 )
+											{
+												timeout += 100000;	// Longer timeout
+											}
 										}
-										//tile playsound( "evt_sq_oafc_glyph_complete" );
-										//tile playsound( "evt_sq_oafc_kachunk" );
-										
-										if( isdefined( touched_player ) )
+
+										while (GetTime() < timeout)
 										{
-											//touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, 8 );
+
+											PrintLn("Breaking out of unmatched.");
+																		
+											level thread reset_tiles();	// will end trigger threads - threads recreated by reset_tiles
 										}
-										
-										level notify( "suspend_timer" );
-										level notify("raise_crystal_1", true);
-										level waittill("raised_crystal_1");
-										
-										flag_wait("oafc_plot_vo_done");
-										wait(5.0);
-										
-										tile_activated = false;
-
-										stage_completed("sq", "OaFC");
-										return;
+						
+										break;
 									}
-									
-									PrintLn("breaking out of match");
-									
-									break;
-								}
-								else
-								{
-									level._picked_tile1 playsound( "evt_sq_oafc_glyph_wrong" );
-									level._picked_tile2 playsound( "evt_sq_oafc_glyph_wrong" );
-									
-									rand = randomintrange(0,2);
-										
-									if( isdefined( touched_player ) && rand == 0 )
-									{
-										touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
-									}
-									else if( isdefined( level._oafc_trigger2.touched_player ) )
-									{
-										level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
-									}
-
-									while(IsDefined(touched_player) && self IsTouching(touched_player) && IsDefined(level._picked_tile2))
-									{
-										wait(0.05);
-									}
-
-									PrintLn("Breaking out of unmatched.");
-																	
-									level thread reset_tiles();	// will end trigger threads - threads recreated by reset_tiles									
-					
-									break;
 								}
 							}
+													
+							wait(0.05);
 						}
+					}
 
-						players = getPlayers();
-
-						if ( players.size <= 3 )
-						{	
-							if (GetTime() >= activation_time + 94000 || touched_player getStance() == "crouch")
+					if (players.size == 1)
+						while(IsDefined(touched_player) && tile_activated == true && touched_player.sessionstate != "spectator" && !tile.matched)
+						{
+							self.touched_player = touched_player;
+							
+							if(set == 1)
 							{
-								tile_activated = false; // Deactivate the tile
+								if(IsDefined(level._picked_tile1) && IsDefined(level._picked_tile2))
+								{
+									if(level._picked_tile1.tile == level._picked_tile2.tile)
+									{
+										level._picked_tile1 playsound( "evt_sq_oafc_glyph_correct" );
+										level._picked_tile2 playsound( "evt_sq_oafc_glyph_correct" );
+										
+										matched = true;
+										level._picked_tile1.matched = true;								
+										level._picked_tile2.matched = true;			
+														
+										level._picked_tile1 moveto(level._picked_tile1.origin - (0,0,24), 0.5);
+										level._picked_tile2 moveto(level._picked_tile2.origin - (0,0,24), 0.5);
+		
+										level._picked_tile1 waittill("movedone");
+		
+										level._picked_tile1 = undefined;
+										level._picked_tile2 = undefined;
+										
+										level._num_matched_tiles ++;
+										
+										if( level._num_matched_tiles < level._num_tiles_to_match )
+										{
+											rand = randomintrange(0,2);
+											
+											if( isdefined( touched_player ) && rand == 0 )
+											{
+												touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											}
+											else if( isdefined( level._oafc_trigger2.touched_player ) )
+											{
+												level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(5,8) );
+											}
+										}
+										
+										if(level._num_matched_tiles == level._num_tiles_to_match)
+										{
+											struct = getstruct( "sq_location_oafc", "targetname" );
+											if( isdefined( struct ) )
+											{
+												playsoundatposition( "evt_sq_oafc_glyph_complete", struct.origin );
+												playsoundatposition( "evt_sq_oafc_kachunk", struct.origin );
+											}
+											//tile playsound( "evt_sq_oafc_glyph_complete" );
+											//tile playsound( "evt_sq_oafc_kachunk" );
+											
+											if( isdefined( touched_player ) )
+											{
+												//touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, 8 );
+											}
+											
+											level notify( "suspend_timer" );
+											level notify("raise_crystal_1", true);
+											level waittill("raised_crystal_1");
+											
+											flag_wait("oafc_plot_vo_done");
+											wait(5.0);
+											
+											tile_activated = false;
+
+											stage_completed("sq", "OaFC");
+											return;
+										}
+										
+										PrintLn("breaking out of match");
+										
+										break;
+									}
+									else
+									{
+										level._picked_tile1 playsound( "evt_sq_oafc_glyph_wrong" );
+										level._picked_tile2 playsound( "evt_sq_oafc_glyph_wrong" );
+										
+										rand = randomintrange(0,2);
+											
+										if( isdefined( touched_player ) && rand == 0 )
+										{
+											touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
+										}
+										else if( isdefined( level._oafc_trigger2.touched_player ) )
+										{
+											level._oafc_trigger2.touched_player thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest1", undefined, randomintrange(2,5) );
+										}
+
+										while(IsDefined(touched_player) && self IsTouching(touched_player) && IsDefined(level._picked_tile2))
+										{
+											wait(0.05);
+										}
+
+										PrintLn("Breaking out of unmatched.");
+																		
+										level thread reset_tiles();	// will end trigger threads - threads recreated by reset_tiles									
+						
+										break;
+									}
+								}
 							}
+
+							players = getPlayers();
+
+							if ( players.size == 1 )
+							{	
+								if (GetTime() >= activation_time + 94000 || touched_player getStance() == "crouch")
+								{
+									tile_activated = false; // Deactivate the tile
+								}
+							}
+													
+							wait(0.05);
 						}
-												
-						wait(0.05);
 					}
 					
 					tile playsound( "evt_sq_oafc_glyph_clear" );
