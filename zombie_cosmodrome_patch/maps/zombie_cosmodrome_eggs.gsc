@@ -122,13 +122,6 @@ solo_letters_spawn()
 
 	if(getPlayers().size == 1)
 	{
-
-		players = get_players();
-		for( i = 0; i < players.size; i++ )
-		{
-			players[i] maps\_zombiemode_score::add_to_player_score(100000);
-		}
-
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
 		level.lander_letters[ "u" ].origin += (0, 0, 0);
