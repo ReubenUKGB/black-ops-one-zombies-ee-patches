@@ -75,25 +75,28 @@ init()
 	level.lander_letters[ "t" ] = GetEnt( "letter_t", "targetname" );
 	level.lander_letters[ "u" ] = GetEnt( "letter_u", "targetname" );
 	level.lander_letters[ "y" ] = GetEnt( "letter_y", "targetname" );
+
 	keys = GetArrayKeys( level.lander_letters );
 	for ( i=0; i<keys.size; i++ )
 	{
 		level.lander_letters[ keys[i] ] Hide();
 	}
 
+	solo_letters_spawn();
+
 /*
 	// SP Testing give weapons
 	if ( IsDefined( level.sp_egg_testing ) )
 	{
 		wait( 10 );
-		players = GetPlayers();
+		players = getPlayers();
 		players[0] maps\_zombiemode_weap_black_hole_bomb::player_give_black_hole_bomb();
 		players[0] GiveWeapon( "thundergun_upgraded_zm" );
 		players[0] GiveWeapon( "ray_gun_upgraded_zm" );
 
 // 		// Give reward!
 // 		wait(15);
-// 		players = GetPlayers();
+// 		players = getPlayers();
 // 		for ( i=0; i<players.size; i++ )
 // 		{
 // 			players[i] thread reward_wait();
@@ -111,6 +114,29 @@ init()
 
 	monitor = GetEnt( "casimir_monitor", "targetname" );
 	monitor SetModel( "p_zom_monitor_csm_screen_off" );
+}
+
+solo_letters_spawn()
+{
+	wait(2);
+
+	if(getPlayers().size == 1)
+	{
+
+		players = get_players();
+		for( i = 0; i < players.size; i++ )
+		{
+			players[i] maps\_zombiemode_score::add_to_player_score(100000);
+		}
+
+		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
+
+		level.lander_letters[ "u" ].origin += (0, 0, 0);
+
+		level.lander_letters[ "n" ].origin += (0, 100, 100);
+
+		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
+	}
 }
 
 
@@ -382,7 +408,7 @@ switch_watcher()
 
 		timeout = GetTime() + 500;	// in milliseconds
 
-		if ( getplayers().size <= 3 )
+		if ( getPlayers().size <= 3 )
 		{
 			timeout += 100000;	// Longer timeout
 		}
@@ -573,25 +599,36 @@ lander_passkey_event()
 	// lander_station1 = base entry, 3 = catwalk, 4 = storage, 5 = centrifuge
 	//	(Easier to visualize by drawing a directional graph)
 	level.lander_key = [];
-	level.lander_key[ "lander_station1" ][ "lander_station3" ] = "s";
-	level.lander_key[ "lander_station1" ][ "lander_station4" ] = "r";
-	level.lander_key[ "lander_station1" ][ "lander_station5" ] = "e";
-	level.lander_key[ "lander_station3" ][ "lander_station1" ] = "y";
-	level.lander_key[ "lander_station3" ][ "lander_station4" ] = "a";
-	level.lander_key[ "lander_station3" ][ "lander_station5" ] = "i";
-	level.lander_key[ "lander_station4" ][ "lander_station1" ] = "m";
-	level.lander_key[ "lander_station4" ][ "lander_station3" ] = "h";
-	level.lander_key[ "lander_station4" ][ "lander_station5" ] = "u";
-	level.lander_key[ "lander_station5" ][ "lander_station1" ] = "t";
-	level.lander_key[ "lander_station5" ][ "lander_station3" ] = "n";
-	level.lander_key[ "lander_station5" ][ "lander_station4" ] = "l";
+
+	if ( getPlayers().size == 1 )
+	{
+		level.lander_key[ "lander_station5" ][ "lander_station1" ] = "l";
+		level.lander_key[ "lander_station5" ][ "lander_station3" ] = "l";
+		level.lander_key[ "lander_station4" ][ "lander_station5" ] = "u";
+		level.lander_key[ "lander_station3" ][ "lander_station5" ] = "n";
+		level.lander_key[ "lander_station1" ][ "lander_station5" ] = "a";
+	}
+	else if (getPlayers().size >= 2) {
+		level.lander_key[ "lander_station1" ][ "lander_station3" ] = "s";
+		level.lander_key[ "lander_station1" ][ "lander_station4" ] = "r";
+		level.lander_key[ "lander_station1" ][ "lander_station5" ] = "e";
+		level.lander_key[ "lander_station3" ][ "lander_station1" ] = "y";
+		level.lander_key[ "lander_station3" ][ "lander_station4" ] = "a";
+		level.lander_key[ "lander_station3" ][ "lander_station5" ] = "i";
+		level.lander_key[ "lander_station4" ][ "lander_station1" ] = "m";
+		level.lander_key[ "lander_station4" ][ "lander_station3" ] = "h";
+		level.lander_key[ "lander_station4" ][ "lander_station5" ] = "u";
+		level.lander_key[ "lander_station5" ][ "lander_station1" ] = "t";
+		level.lander_key[ "lander_station5" ][ "lander_station3" ] = "n";
+		level.lander_key[ "lander_station5" ][ "lander_station4" ] = "l";
+	}
 
 	level.passkey = array( "l", "u", "n", "a" );
 	level.passkey_progress = 0;
-	level.secret1 = array( "h", "i", "t", "s", "a", "m" );
-	level.secret1_progress = 0;
-	level.secret2 = array( "h", "y", "e", "n", "a" );
-	level.secret2_progress = 0;
+	//level.secret1 = array( "h", "i", "t", "s", "a", "m" );
+	//level.secret1_progress = 0;
+	//level.secret2 = array( "h", "y", "e", "n", "a" );
+	//level.secret2_progress = 0;
 
 	thread lander_monitor();
 
@@ -603,9 +640,6 @@ lander_passkey_event()
     level.lander_audio_ent Delete();
 }
 
-
-//
-//	
 lander_monitor()
 {
 	lander = getent( "lander", "targetname" );
@@ -615,22 +649,18 @@ lander_monitor()
 	
 	while ( !flag( "passkey_confirmed" ) )
 	{
-		if ( getplayers().size == 1 )
-		{
-			flag_set( "passkey_confirmed" );
-		}
-	
 		level waittill("lander_launched");
 
 		// Display letters and spawn trigger only if called
 		//	If used as an escape, no dice
-		if ( lander.called )
+		if ( level.lander_in_use )
 		{
 			// Calculate letter
 			start = lander.depart_station;
 			dest = lander.station;
 			letter = level.lander_key[ start ][ dest ];
 			model = level.lander_letters[ letter ];
+
 			model Show();
 			model PlaySound( "zmb_spawn_powerup" );
 			model thread spin_letter();
@@ -644,12 +674,16 @@ lander_monitor()
 			// No letter taken
 			if ( !flag( "letter_acquired" ) )
 			{
-				level.passkey_progress = 0;
-				level.secret1_progress = 0;
-				level.secret2_progress = 0;
+				if (getPlayers().size >= 2) {
+					level.passkey_progress = 0;
+				}
+
+				//level.secret1_progress = 0;
+				//level.secret2_progress = 0;
 			}
 			else
 			{
+
 				flag_clear( "letter_acquired" );
 			}
 			trig delete();
@@ -658,9 +692,11 @@ lander_monitor()
 		}
 		else	// if it's used for escape, we need to reset.
 		{
-			level.passkey_progress = 0;
-			level.secret1_progress = 0;
-			level.secret2_progress = 0;
+			if (getPlayers().size >= 2) {
+				level.passkey_progress = 0;
+			}
+			//level.secret1_progress = 0;
+			//level.secret2_progress = 0;
 		}
 	}
 }
@@ -696,6 +732,7 @@ letter_grab( letter, model )
 	if ( letter == level.passkey[ level.passkey_progress ] )
 	{
 		level.passkey_progress++;
+
 		if ( level.passkey_progress == level.passkey.size )
 		{
 			flag_set( "passkey_confirmed" );
@@ -703,11 +740,13 @@ letter_grab( letter, model )
 	}
 	else
 	{
-		level.passkey_progress = 0;
+		if (getPlayers().size >= 2) {
+			level.passkey_progress = 0;
+		}
 	}
-
+	
 	// Secret word check
-	if ( letter == level.secret1[ level.secret1_progress ] )
+	/*if ( letter == level.secret1[ level.secret1_progress ] )
 	{
 		level.secret1_progress++;
 		if ( level.secret1_progress == level.secret1.size )
@@ -732,7 +771,7 @@ letter_grab( letter, model )
 	else
 	{
 		level.secret2_progress = 0;
-	}
+	}*/
 }
 
 
@@ -805,7 +844,7 @@ wait_for_combo( trig )
 	crossbow_hit = false;
 
 
-	if ( getplayers().size == 1 )
+	if ( getPlayers().size == 1 )
 	{
 		ray_gun_hit = true;
 		doll_hit	= true;
@@ -936,7 +975,7 @@ wait_for_gersh_vox()
     wait(12.5);
     
 	// Give reward!
-	players = GetPlayers();
+	players = getPlayers();
 	for ( i=0; i<players.size; i++ )
 	{
 		players[i] thread reward_wait();
