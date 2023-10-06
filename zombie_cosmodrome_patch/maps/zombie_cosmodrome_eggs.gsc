@@ -834,14 +834,14 @@ wait_for_combo( trig )
 	weapon_combo_spot = GetStruct( "weapon_combo_spot", "targetname" );
 	ray_gun_hit = false;
 	doll_hit	= false;
-	crossbow_hit = false;
+	//crossbow_hit = false;
 
 
 	if ( getPlayers().size == 1 )
 	{
-		ray_gun_hit = true;
+		//ray_gun_hit = true;
 		doll_hit	= true;
-		crossbow_hit = true;
+		//crossbow_hit = true;
 	}
 
 
@@ -864,10 +864,12 @@ wait_for_combo( trig )
 				{
 					doll_hit = true;
 				}
+				/*
 				else if ( attacker GetCurrentWeapon() == "crossbow_explosive_upgraded_zm" )
 				{
 					crossbow_hit = true;
 				}
+				*/
 			}
 
 			if ( ray_gun_hit && doll_hit && flag( "thundergun_hit" ) )
