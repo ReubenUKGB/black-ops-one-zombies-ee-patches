@@ -129,6 +129,26 @@ solo_letters_spawn()
 		level.lander_letters[ "n" ].origin += (0, 100, 100);
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
+
+		if(maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+		{
+	        wait (5);
+			iprintln("previous ee's done");
+		}
+		else if(maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		{
+			wait (5);
+			iprintln("cotd ee done");
+		}
+		else if(maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+		{
+			wait (5);
+			iprintln("EOA ee done");
+		}
+		else {
+			wait (5);
+			iprintln("ee not done");
+		}
 	}
 }
 

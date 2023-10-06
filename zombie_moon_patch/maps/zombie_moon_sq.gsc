@@ -170,10 +170,8 @@ init_sidequest()
 		{
 			entnum = players[i].zm_random_char;
 		}
-		
-		players = getPlayers();
 
-		if (players.size == 1)
+		if (getPlayers().size == 1)
 		{
 			entnum = 3;
 		}	
@@ -462,9 +460,7 @@ get_specific_player( num )
 			ent_num = players[i].zm_random_char;
 		}
 
-		players = getPlayers();
-
-		if (players.size == 1)
+		if (getPlayers().size == 1)
 		{
 			ent_num = 3;
 		}

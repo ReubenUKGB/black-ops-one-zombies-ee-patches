@@ -1260,9 +1260,19 @@ coast_egg_bottle_think()
 		// watch for the trigger to take the right damage from a player
 		e_icebreaker waittill( "damage", i_amt, e_inflictor, vec_direction, vec_point, mod_type );
 		
-		if( is_player_valid( e_inflictor ) )
+		if ( GetPlayers().size == 1)
 		{
-			ice_solid = false;
+			if( is_player_valid( e_inflictor ) )
+			{
+				ice_solid = false;
+			}
+		}
+		else if (GetPlayers().size >= 2)
+		{
+			if( is_player_valid( e_inflictor ) && mod_type == level.trials[2] )
+			{
+				ice_solid = false;
+			}
 		}
 	}
 

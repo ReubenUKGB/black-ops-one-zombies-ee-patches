@@ -707,7 +707,12 @@ init_sidequest()
 		if( IsDefined( players[i].zm_random_char ) )
 		{
 			entnum = players[i].zm_random_char;
-		}		
+		}
+
+		if (getPlayers().size == 1)
+		{
+			ent_num = 3;
+		}
 		
 		if((entnum == 3) && maps\_zombiemode::is_sidequest_previously_completed("COTD"))
 		{
