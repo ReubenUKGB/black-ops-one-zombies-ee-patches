@@ -19,7 +19,7 @@ init()
 {
 	PreCacheModel("p_ztem_glyphs_00");
 	declare_sidequest_stage("sq", "OaFC", ::init_stage, ::stage_logic, ::exit_stage);
-	set_stage_time_limit("sq", "OaFC", 15 * 60);	// 5 minute limit.
+	set_stage_time_limit("sq", "OaFC", 20 * 60);	// 20 minute limit.
 //	declare_stage_title("sq", "OaFC", &"ZOMBIE_TEMPLE_SIDEQUEST_STAGE_1_TITLE");
 	declare_stage_asset_from_struct("sq", "OaFC", "sq_oafc_switch", ::oafc_switch);
 	declare_stage_asset_from_struct("sq", "OaFC", "sq_oafc_tileset1", ::tileset1, maps\_zombiemode_sidequests::radius_trigger_thread);
