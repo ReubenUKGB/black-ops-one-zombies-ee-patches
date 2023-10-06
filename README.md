@@ -4,3 +4,5 @@ A repository containing patches to the zombies maps: Ascension, Call of the Dead
 To install, download the latest release and extract the files to "steamapps\common\Call of Duty Black Ops\zone\Common"
 
 Compile from source using the Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
+
+For more info about the mod (such as the steps to complete the Easter eggs in solo), read the associated [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
