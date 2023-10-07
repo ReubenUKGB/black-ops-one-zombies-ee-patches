@@ -170,15 +170,32 @@ init_sidequest()
 		{
 			entnum = players[i].zm_random_char;
 		}
-
+		
 		if (getPlayers().size == 1)
 		{
 			entnum = 3;
-		}	
+
+			if((entnum == 3) && maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+			{
+				players[i] add_sidequest_icon("sq", "generator");
+				level._all_previous_done = true;
+				break;
+			}
+			else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+			{
+				players[i] add_sidequest_icon("sq", "vril");
+				break;
+			}
+			else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+			{
+				players[i] add_sidequest_icon("sq", "anti115");
+				break;
+			}
+		}
 				
 		if((entnum == 3))
 		{	
-			devmode = 1;
+			devmode = 0;
 
 			if(devmode)
 			{
@@ -186,26 +203,22 @@ init_sidequest()
 				level._all_previous_done = true;
 			}
 			else
-			{
-				if(level.onlineGame)
+			{		
+				if(maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 				{
-					
-				 	if(maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA"))
-					{
-						players[i] add_sidequest_icon("sq", "generator");
-						level._all_previous_done = true;
-						break;
-					}
-					else if(maps\_zombiemode::is_sidequest_previously_completed("COTD"))
-					{
-						players[i] add_sidequest_icon("sq", "vril");
-						break;
-					}
-					else if(maps\_zombiemode::is_sidequest_previously_completed("EOA"))
-					{
-						players[i] add_sidequest_icon("sq", "anti115");
-						break;
-					}
+					players[i] add_sidequest_icon("sq", "generator");
+					level._all_previous_done = true;
+					break;
+				}
+				else if(maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+				{
+					players[i] add_sidequest_icon("sq", "vril");
+					break;
+				}
+				else if(maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+				{
+					players[i] add_sidequest_icon("sq", "anti115");
+					break;
 				}
 			}
 		}
