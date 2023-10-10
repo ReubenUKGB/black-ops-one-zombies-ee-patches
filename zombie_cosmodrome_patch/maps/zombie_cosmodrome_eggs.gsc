@@ -646,7 +646,7 @@ lander_monitor()
 
 		// Display letters and spawn trigger only if called
 		//	If used as an escape, no dice
-		if ( level.lander_in_use )
+		if ( getPlayers().size == 1 && level.lander_in_use )
 		{
 			// Calculate letter
 			start = lander.depart_station;
@@ -667,10 +667,7 @@ lander_monitor()
 			// No letter taken
 			if ( !flag( "letter_acquired" ) )
 			{
-				if (getPlayers().size >= 2) {
-					level.passkey_progress = 0;
-				}
-
+				level.passkey_progress = 0;
 				//level.secret1_progress = 0;
 				//level.secret2_progress = 0;
 			}
@@ -682,6 +679,31 @@ lander_monitor()
 			trig delete();
 			model Hide();
 			model StopLoopSound( .5 );
+		}
+		else if( getPlayers().size >= 2 && level.lander_in_use )
+		{
+			// Calculate letter
+			start = lander.depart_station;
+			dest = lander.station;
+			letter = level.lander_key[ start ][ dest ];
+			model = level.lander_letters[ letter ];
+			model Show();
+			model PlaySound( "zmb_spawn_powerup" );
+			model thread spin_letter();
+			model PlayLoopSound( "zmb_spawn_powerup_loop", .5 );
+
+			// Spawn trigger
+			trig = Spawn( "trigger_radius", model.origin, 0, 200, 150 );
+			trig thread letter_grab( letter, model );
+			flag_wait("lander_grounded");
+
+			// No letter taken
+			if ( !flag( "letter_acquired" ) )
+			{
+				level.passkey_progress = 0;
+				level.secret1_progress = 0;
+				level.secret2_progress = 0;
+			}
 		}
 		else	// if it's used for escape, we need to reset.
 		{
