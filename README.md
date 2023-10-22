@@ -1,5 +1,5 @@
 # Black Ops One Zombies EE patches
-A repository containing patches to the zombies maps: Ascension, Call of the Dead, Shangri-La &amp; Moon. The patches enable the ability to complete the Easter eggs in solo or with any amount of players of up to four.
+A repository containing patches to the zombies maps: Ascension, Call of the Dead, Shangri-La &amp; Moon. The patches enable the ability to complete the Easter eggs in solo or with any amount of players of up to four people.
 
 To install, download the latest release and extract the files to "steamapps\common\Call of Duty Black Ops\zone\Common"
 
