@@ -32,11 +32,11 @@ achievement_eggs()
 
 	level giveachievement_wrapper( "DLC3_ZOM_STAND_IN", true );
 	level givegamerpicture_wrapper( "DLC3_TAKEO", true );
-	if ( !flag( "solo_game" ) )
-	{
+	//if ( !flag( "solo_game" ) )
+	//{
 		level giveachievement_wrapper( "DLC3_ZOM_ENSEMBLE_CAST", true );
 		level givegamerpicture_wrapper( "DLC3_NIKOLAI", true );
-	}
+	//}
 }
 
 
