@@ -7,4 +7,4 @@ Compile from source using the Call of Duty: Black Ops - Mod Tools (BETA): steam:
 
 For more info about the mod (such as the steps to complete the Easter eggs in solo), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gbraad){:target="_blank"}
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gbraad)
