@@ -5,6 +5,6 @@ To install, download the latest release and extract the files to "steamapps\comm
 
 Compile from source using the Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
 
-For more info about the mod (such as the steps to complete the Easter eggs in solo), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
+For more info (such as the steps to complete the Easter eggs in solo), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/reubenukgb)
