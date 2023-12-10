@@ -171,29 +171,26 @@ init_sidequest()
 			entnum = players[i].zm_random_char;
 		}
 		
-		if (getPlayers().size == 1)
+		if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
 		{
-			if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+			if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 			{
-				if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
-				{
-					players[i] add_sidequest_icon("sq", "generator");
-					level._all_previous_done = true;
-					break;
-				}
+				players[i] add_sidequest_icon("sq", "generator");
+				level._all_previous_done = true;
+				break;
+			}
 
-				break;
-			}
-			else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
-			{
-				players[i] add_sidequest_icon("sq", "vril");
-				break;
-			}
-			else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
-			{
-				players[i] add_sidequest_icon("sq", "anti115");
-				break;
-			}
+			break;
+		}
+		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		{
+			players[i] add_sidequest_icon("sq", "vril");
+			break;
+		}
+		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+		{
+			players[i] add_sidequest_icon("sq", "anti115");
+			break;
 		}
 	}
 	
