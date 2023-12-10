@@ -443,11 +443,6 @@ get_specific_player( num )
 			ent_num = players[i].zm_random_char;
 		}
 
-		if (getPlayers().size == 1)
-		{
-			ent_num = 3;
-		}
-
 		if(ent_num == num)
 		{
 			return players[i];
