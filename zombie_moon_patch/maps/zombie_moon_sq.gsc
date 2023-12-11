@@ -171,9 +171,11 @@ init_sidequest()
 			entnum = players[i].zm_random_char;
 		}
 		
-		if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		iPrintLn(players[i].zm_random_char);
+
+		if((players[i].zm_random_char == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
 		{
-			if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+			if((players[i].zm_random_char == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 			{
 				players[i] add_sidequest_icon("sq", "generator");
 				level._all_previous_done = true;
@@ -182,12 +184,12 @@ init_sidequest()
 
 			break;
 		}
-		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		else if((players[i].zm_random_char == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
 		{
 			players[i] add_sidequest_icon("sq", "vril");
 			break;
 		}
-		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+		else if((players[i].zm_random_char == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 		{
 			players[i] add_sidequest_icon("sq", "anti115");
 			break;
