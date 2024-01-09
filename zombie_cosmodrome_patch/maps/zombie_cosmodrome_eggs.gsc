@@ -82,7 +82,7 @@ init()
 		level.lander_letters[ keys[i] ] Hide();
 	}
 
-	solo_letters_spawn();
+	luna_letters_spawn();
 
 /*
 	// SP Testing give weapons
@@ -116,7 +116,7 @@ init()
 	monitor SetModel( "p_zom_monitor_csm_screen_off" );
 }
 
-solo_letters_spawn()
+luna_letters_spawn()
 {
 	wait(2);
 
