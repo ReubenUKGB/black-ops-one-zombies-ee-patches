@@ -120,8 +120,7 @@ solo_letters_spawn()
 {
 	wait(2);
 
-	if ( getPlayers().size < 2 )
-	{
+	if (getPlayers().size < 2) {
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
 		level.lander_letters[ "u" ].origin += (0, 0, 0);
@@ -600,7 +599,7 @@ lander_passkey_event()
 	//	(Easier to visualize by drawing a directional graph)
 	level.lander_key = [];
 
-	if ( getPlayers().size == 1 )
+	if ( getPlayers().size < 2)
 	{
 		level.lander_key[ "lander_station5" ][ "lander_station1" ] = "l";
 		level.lander_key[ "lander_station5" ][ "lander_station3" ] = "l";
@@ -844,7 +843,7 @@ wait_for_combo( trig )
 	//crossbow_hit = false;
 
 
-	if ( getPlayers().size == 1 )
+	if ( getPlayers().size < 2)
 	{
 		//ray_gun_hit = true;
 		doll_hit	= true;
