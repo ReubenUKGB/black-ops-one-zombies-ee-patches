@@ -120,7 +120,7 @@ solo_letters_spawn()
 {
 	wait(2);
 
-	if(getPlayers().size == 1)
+	if ( getPlayers().size < 2 )
 	{
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
@@ -130,9 +130,16 @@ solo_letters_spawn()
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
 	}
+	else if (getPlayers().size >= 2) {
+		level.lander_letters[ "l" ].origin += (0, 0, 0);
+
+		level.lander_letters[ "u" ].origin += (0, 0, 0);
+
+		level.lander_letters[ "n" ].origin += (0, 0, 0);
+
+		level.lander_letters[ "a" ].origin += (0, 0, 0);
+	}
 }
-
-
 //
 //
 play_easter_egg_audio( alias, sound_ent, text )
