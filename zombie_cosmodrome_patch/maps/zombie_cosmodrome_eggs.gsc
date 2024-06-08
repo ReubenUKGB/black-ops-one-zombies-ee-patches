@@ -136,7 +136,7 @@ luna_letters_spawn()
 
 		level.lander_letters[ "n" ].origin += (0, 0, 0);
 
-		level.lander_letters[ "a" ].origin += (1975, -1250, -100);
+		level.lander_letters[ "a" ].origin += (0, 0, 0);
 	}
 }
 //
