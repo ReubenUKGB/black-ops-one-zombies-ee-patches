@@ -123,20 +123,9 @@ luna_letters_spawn()
 	if (getPlayers().size < 2) {
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
-		level.lander_letters[ "u" ].origin += (0, 0, 0);
-
 		level.lander_letters[ "n" ].origin += (0, 100, 100);
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
-	}
-	else if (getPlayers().size >= 2) {
-		level.lander_letters[ "l" ].origin += (0, 0, 0);
-
-		level.lander_letters[ "u" ].origin += (0, 0, 0);
-
-		level.lander_letters[ "n" ].origin += (0, 0, 0);
-
-		level.lander_letters[ "a" ].origin += (0, 0, 0);
 	}
 }
 //
