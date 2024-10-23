@@ -118,8 +118,8 @@ init()
 
 luna_letters_spawn()
 {
-	wait(2);
-
+	flag_wait( "all_players_connected" );
+	
 	if (getPlayers().size < 2) {
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
@@ -127,9 +127,11 @@ luna_letters_spawn()
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
 	}
+	else {
+		return;
+	}
 }
-//
-//
+
 play_easter_egg_audio( alias, sound_ent, text )
 {
     if( alias == undefined )
@@ -639,8 +641,7 @@ lander_monitor()
 	{
 		level waittill("lander_launched");
 
-		// Display letters and spawn trigger only if called
-		//	If used as an escape, no dice
+		// Display letters and spawn trigger only if lander is in use
 		if ( level.lander_in_use )
 		{
 			// Calculate letter
@@ -828,17 +829,7 @@ wait_for_combo( trig )
 
 	weapon_combo_spot = GetStruct( "weapon_combo_spot", "targetname" );
 	ray_gun_hit = false;
-	doll_hit	= false;
-	//crossbow_hit = false;
-
-
-	if ( getPlayers().size < 2)
-	{
-		//ray_gun_hit = true;
-		doll_hit	= true;
-		//crossbow_hit = true;
-	}
-
+	doll_hit = false;
 
 	players = get_players();
 	array_thread( players, ::thundergun_check, self, trig, weapon_combo_spot );
@@ -855,23 +846,30 @@ wait_for_combo( trig )
 			}
 			else if ( mod == "MOD_GRENADE_SPLASH" )
 			{
-				if ( amount >= 90000 )	// assume this is a doll explosion
+				if ( amount >= 90000 || players.size < 2 )	// assume this is a doll explosion
 				{
 					doll_hit = true;
-				}
-				/*
-				else if ( attacker GetCurrentWeapon() == "crossbow_explosive_upgraded_zm" )
-				{
-					crossbow_hit = true;
-				}
-				*/
+				}	
 			}
-
-			if ( ray_gun_hit && doll_hit && flag( "thundergun_hit" ) )
+			if ( players.size < 2)
 			{
-				flag_set( "weapons_combined" );
-				level thread soul_release( self, trig.origin );
-				return;
+	
+				if ( ray_gun_hit && flag( "thundergun_hit" ) )
+				{
+					flag_set( "weapons_combined" );
+					level thread soul_release( self, trig.origin );
+					return;
+				}	
+			}
+			else if ( players.size >= 2)
+			{
+	
+				if ( ray_gun_hit && doll_hit && flag( "thundergun_hit" ) )
+				{
+					flag_set( "weapons_combined" );
+					level thread soul_release( self, trig.origin );
+					return;
+				}	
 			}
 		}
 	}
