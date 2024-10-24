@@ -343,7 +343,7 @@ oafc_trigger_thread(tiles, set)
 				
 				touched_player = self player_in_trigger();
 				
-				if(IsDefined(touched_player))
+				if(IsDefined(touched_player) && touched_player getStance() == "stand")
 				{
 					
 					if(set == 1)
@@ -589,7 +589,7 @@ oafc_trigger_thread(tiles, set)
 
 							if ( players.size == 1 )
 							{	
-								if (GetTime() - activation_time >= 100000 || touched_player getStance() == "crouch")
+								if (GetTime() - activation_time >= 100000 || self IsTouching(touched_player) && touched_player getStance() == "crouch")
 								{
 									tile_activated = false; // Deactivate the tile
 								}
