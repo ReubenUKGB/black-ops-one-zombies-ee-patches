@@ -354,8 +354,6 @@ oafc_trigger_thread(tiles, set)
 					tile SetModel(tile.tile);
 					tile playsound( "evt_sq_oafc_glyph_activate" );
 					
-					wait(5.0);
-					
 					matched = false;
 					
 					if(set == 1)
@@ -585,15 +583,12 @@ oafc_trigger_thread(tiles, set)
 								}
 							}
 
-							players = getPlayers();
-
-							if ( players.size == 1 )
-							{	
-								if (GetTime() - activation_time >= 100000 || self IsTouching(touched_player) && touched_player getStance() == "crouch")
-								{
-									tile_activated = false; // Deactivate the tile
-								}
+					
+							if (GetTime() - activation_time >= 100000 || self IsTouching(touched_player) && touched_player getStance() == "crouch")
+							{
+								tile_activated = false; // Deactivate the tile
 							}
+						
 													
 							wait(0.05);
 						}
