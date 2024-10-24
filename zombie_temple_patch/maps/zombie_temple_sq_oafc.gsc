@@ -367,8 +367,8 @@ oafc_trigger_thread(tiles, set)
 						level._picked_tile2 = tile;
 					}
 
-					tile_activated = true; // Flag to track tile activation
-                    activation_time = GetTime() + 1000; // Record activation time
+					tile_activated = true; // Track tile activation
+                    activation_time = GetTime(); // Record activation time
 
 					players = getPlayers();
 
@@ -589,7 +589,7 @@ oafc_trigger_thread(tiles, set)
 
 							if ( players.size == 1 )
 							{	
-								if (GetTime() >= activation_time + 99000 || touched_player getStance() == "crouch")
+								if (GetTime() - activation_time >= 100000 || touched_player getStance() == "crouch")
 								{
 									tile_activated = false; // Deactivate the tile
 								}
