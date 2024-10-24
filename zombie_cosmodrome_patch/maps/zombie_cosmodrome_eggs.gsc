@@ -594,6 +594,7 @@ lander_passkey_event()
 	{
 		level.lander_key[ "lander_station5" ][ "lander_station1" ] = "l";
 		level.lander_key[ "lander_station5" ][ "lander_station3" ] = "l";
+		level.lander_key[ "lander_station5" ][ "lander_station4" ] = "l";
 		level.lander_key[ "lander_station4" ][ "lander_station5" ] = "u";
 		level.lander_key[ "lander_station3" ][ "lander_station5" ] = "n";
 		level.lander_key[ "lander_station1" ][ "lander_station5" ] = "a";
