@@ -1,5 +1,5 @@
 # Black Ops One Zombies EE patches
-Mods for the Zombies maps: Ascension, Call of the Dead, Shangri-La & Moon Easter egg steps in Black Ops 1.
+Mods for the Zombies maps: Ascension, Call of the Dead, Shangri-La & Moon Easter egg steps in Black Ops 1. These patches enable the ability to complete the Easter eggs in solo or with any amount of players and will unlock achievements upon completion.
 
 To install, download the .ff files in the release section and extract the files to "steamapps\common\Call of Duty Black Ops\zone\Common"
 
