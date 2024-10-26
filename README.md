@@ -3,7 +3,7 @@ Mods for the Zombies maps: Ascension, Call of the Dead, Shangri-La & Moon. These
 
 These mods work with any version of Black Ops 1, Game_Mod and Plutonium compatibility soon.
 
-To install, download the .ff files in the release section and extract the files to "steamapps\common\Call of Duty Black Ops\zone\Common"
+To install, download the .zip files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and extract the files to "steamapps\common\Call of Duty Black Ops\zone\Common"
 
 Compile from source using the Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
 
