@@ -7,7 +7,7 @@ To install, download the .ff files in the release section and extract the files 
 
 Compile from source using the Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
 
-For more info about this mod (such as the steps to complete the Easter eggs in solo), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
+For more info about this mod, such as the steps to complete the Easter eggs (they're as close to the original steps as possible when there's less than four players present), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
 If you like this project and would like to support it, consider donating by clicking on the button below:
 
