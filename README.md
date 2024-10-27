@@ -13,6 +13,9 @@ The co-op version of the Call of the Dead Easter egg now works in solo, you no l
 **Shangri-La:**</br>
 It now works with any amount of players and in solo mode the tile matching step now gives the player 100 seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles) and time in eclipse mode has been increased to 20 minutes during the tile matching step (the player always spawns as Richtofen when playing solo).
 
+**Moon:**</br>
+It now works with any amount of players, still requires the completion of previous Easter eggs and someone must spawn as Richtofen in the game (the player always spawns as Richtofen when playing solo).
+
 **Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): [steam://install/42740](steam://install/42740)
 
 For more info about this mod, read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
