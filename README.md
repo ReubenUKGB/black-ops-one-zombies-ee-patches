@@ -4,7 +4,7 @@ These mods work with any version of Black Ops 1, Game_Mod and Plutonium compatib
 
 To install, download the files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and copy the files (extract first if downloading the all-in-one .zip file) to "steamapps\common\Call of Duty Black Ops\zone\Common"
 
-**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): (steam://install/42740)
+**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): [steam://install/42740](steam://install/42740)
 
 For more info about this mod, such as the steps to complete the Easter eggs (they're as close to the original steps as possible when there's less than four players present), read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
