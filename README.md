@@ -10,7 +10,7 @@ To install, download the files from the [releases](https://github.com/ReubenUKGB
 It now works with any amount of players, the synchronised buttons step now gives players one-hundred seconds to press all four buttons when not in a four player game, the lander step is solo-able (the LUNA letters are at there original positions in coop) after the pressure plate step (in order: ride the lander near the Revive perk to grab the letter L, ride the lander near the Stamin-Up perk to grab the letter U, ride the lander near the Speed-Cola perk to grab the letter N and ride the lander near the PhD perk to grab the letter A) and the freeing Gersh step only requires the upgraded Zeus Cannon, upgraded Ray Gun and Gersh Device when playing solo.
 
 **Call of the Dead:**</br>
-The co-op version of the Call of the Dead Easter egg now works in solo, you no longer have to knife the frozen vodka bottle, you can shoot at the ice encased around it to dislodge it whilst standing below it to catch it in solo, when in co-op the vodka bottle needs to be knifed.
+The co-op version of the Call of the Dead Easter egg now works in solo, you no longer have to knife the frozen vodka bottle, you can shoot at the ice encased around it to dislodge it whilst standing below it to catch it in solo, when in co-op the ice encased aroubnd the vodka bottle needs to be knifed.
 
 For more info about this mod, read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
