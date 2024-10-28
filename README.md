@@ -3,7 +3,7 @@
 These mods work with the Steam version of the game.
 
 **How to install:**</br>
-Download the files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and copy the .ff files (extract first if downloading the all-in-one .zip file) to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
+Download the appropriate file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, extract and then copy the .ff files to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
 
 **How to uninstall:**</br>
 Verify the integrity of game files for _Call of Duty: Black Ops_ and _Call of Duty: Black Ops - Multiplayer_.
