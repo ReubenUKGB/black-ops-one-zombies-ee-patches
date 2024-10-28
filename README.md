@@ -2,7 +2,11 @@
 
 These mods work with any version of Black Ops 1, Game_Mod and Plutonium compatibility soon.
 
-To install, download the files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and copy the .ff files (extract first if downloading the all-in-one .zip file) to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
+**How to install:**</br>
+Download the files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and copy the .ff files (extract first if downloading the all-in-one .zip file) to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
+
+**How to uninstall:**</br>
+Either verify the integrity of game files for _Call of Duty: Black Ops_ and _Call of Duty: Black Ops: Multiplayer_ or navigate to _"steamapps\common\Call of Duty Black Ops\zone\Common"_ and delete the mods .ff files or go to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the mods folders.
 
 **Ascension:**</br>
 The Casimir Mechanism Easter egg now works with any amount of players, the buttons step now gives players 100 seconds to press all 4 buttons when not in a 4 player game, the lunar lander step is solo-able (the LUNA letters are at there original positions in coop) after the pressure plate step (in order: ride the lander near the Revive perk to grab the letter L, ride the lander near the Stamin-Up perk to grab the letter U, ride the lander near the Speed-Cola perk to grab the letter N and ride the lander near the PhD perk to grab the letter A) and the freeing Gersh step only requires the upgraded Zeus Cannon, upgraded Ray Gun and Gersh Device when playing solo.
