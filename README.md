@@ -1,6 +1,6 @@
-# Black Ops 1: Zombies EE patches
+# Black Ops 1: Zombies EE patches (Game_Mod Compatible)
 
-These mods work with any version of Black Ops 1, Game_Mod and Plutonium compatibility soon.
+These mods work with the [Game_Mod loader](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1.
 
 **How to install:**</br>
 Download the files from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section and copy the .ff files (extract first if downloading the all-in-one .zip file) to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
