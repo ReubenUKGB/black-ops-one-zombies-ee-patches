@@ -642,14 +642,10 @@ sundial_button()
 			
 			delay = 1;
 			
-			
-			
 			if(get_players().size <= 3)
 			{
 				delay = 10;
 			}
-			
-			
 			
 			wait(delay);
 			
