@@ -23,8 +23,6 @@ The Time Travel Will Tell Easter egg now works with any amount of players and in
 **Moon:**</br>
 The Richtofen's Grand Scheme Easter egg now works with any amount of players, still requires the completion of previous Easter eggs and someone must spawn as Richtofen in the game (player one always spawns as Richtofen).
 
-**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): [steam://install/42740](steam://install/42740)
-
 For more info about this mod, read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
 If you like this project and would like to support it, consider donating by clicking on the button below:
