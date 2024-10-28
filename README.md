@@ -6,7 +6,7 @@ These mods require [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v
 Download the zip file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, extract and copy _"Zombies EE Patches"_ to the _"steamapps\common\Call of Duty Black Ops\mods"_ folder.
 
 **How to uninstall:**</br>
-Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the mod folders.
+Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the _"Zombies EE Patches"_ folder.
 
 **Known bugs:**</br>
 - None.
