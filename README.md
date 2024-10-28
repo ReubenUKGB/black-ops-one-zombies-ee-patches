@@ -8,7 +8,7 @@ Download the zip file from the [releases](https://github.com/ReubenUKGB/black-op
 **How to uninstall:**</br>
 Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the _"Zombies EE Patches"_ folder.
 
-**Known bugs:**</br>
+**Known bugs:**
 - None.
 
 **Ascension:**</br>
