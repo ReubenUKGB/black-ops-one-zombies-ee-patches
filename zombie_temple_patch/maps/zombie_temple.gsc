@@ -153,7 +153,7 @@ main()
 		
 	level thread maps\zombie_temple_debug::main();
 	
-	OnPlayerConnect_Callback( ::temple_player_connect );
+	//OnPlayerConnect_Callback( ::temple_player_connect );
 	
 	level thread maps\zombie_temple_ffotd::main_end();
 	
@@ -187,15 +187,10 @@ init_client_flags()
 	
 }
 
-temple_player_connect()
-{
-	flag_wait( "all_players_connected" );
-	players = GetPlayers();
-	for (i = 0; i < players.size; i++)
-	{
-		players[i] maps\_zombiemode_score::player_add_points( 100000 );
-	}
-}
+//temple_player_connect()
+//{
+//	self SetClientDvar( "player_disableWeaponsInWater", 0 );
+//}
 
 temple_sidequest_of_awesome()
 {
@@ -824,7 +819,6 @@ give_player_model_override( entity_num )
 			break;	
 	}
 }
-
 
 //Order needs to match client scripts
 player_set_viewmodel_override( entity_num )

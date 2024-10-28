@@ -1172,7 +1172,6 @@ give_player_model_override( entity_num )
 		entity_num = self.zm_random_char;
 		self.entity_num = entity_num;
 	}
-	
 	else if(level._override_num_chars_connected == (GetNumExpectedPlayers() -1 ) )
 	{
 		self.zm_random_char = 3;
@@ -1245,13 +1244,6 @@ player_set_viewmodel_override( entity_num )
 	else
 	{
 		entity_num = self.entity_num;
-	}
-
-	players = getPlayers();
-
-	if (players.size == 1)
-	{
-		entity_num = 3;
 	}
 
 	switch( entity_num )
@@ -1334,13 +1326,6 @@ gasmask_reset_player_model( entity_num )
 		entity_num = self.zm_random_char;
 	}
 
-	players = getPlayers();
-
-	if (players.size == 1)
-	{
-		entity_num = 3;
-	}
-
 	self Detach(self.headModel, "");
 
 	switch( entity_num )
@@ -1365,13 +1350,6 @@ gasmask_reset_player_set_viewmodel( entity_num )
 	if( IsDefined( self.zm_random_char ) )
 	{
 		entity_num = self.zm_random_char;
-	}
-
-	players = getPlayers();
-
-	if (players.size == 1)
-	{
-		entity_num = 3;
 	}
 	
 	switch( self.entity_num )
