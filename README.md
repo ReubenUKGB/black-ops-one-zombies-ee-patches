@@ -8,7 +8,7 @@ Download the files from the [releases](https://github.com/ReubenUKGB/black-ops-o
 **How to uninstall:**</br>
 Either verify the integrity of game files for _Call of Duty: Black Ops_ and _Call of Duty: Black Ops - Multiplayer_ or navigate to _"steamapps\common\Call of Duty Black Ops\zone\Common"_ and delete the mods .ff files.
 
-**Known bugs:**</br>
+**Known bugs:**
 - The Mule Kick perk is bugged and doesn't work properly.
 
 **Ascension:**</br>
