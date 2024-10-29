@@ -17,7 +17,7 @@ main()
 on_player_connect()
 {
     enable_watermark = 1;
-
+    
     for (;;)
     {
         if (enable_watermark == 1)
