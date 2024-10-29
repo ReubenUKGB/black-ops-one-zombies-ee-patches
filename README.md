@@ -21,7 +21,7 @@ The co-op version of the Ensemble Cast Easter egg now works in solo, you no long
 The Time Travel Will Tell Easter egg now works with any amount of players and in solo mode the tile matching step now gives the player 100 seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles) and time in eclipse mode has been increased to 20 minutes during the tile matching step (player 1 always spawns as Richtofen).
 
 **Moon:**</br>
-The Richtofen's Grand Scheme Easter egg now works with any amount of players, still requires the completion of previous Easter eggs and someone must spawn as Richtofen in the game (player 1 always spawns as Richtofen).
+The Richtofen's Grand Scheme Easter egg now works with any amount of players and still requires the completion of previous Easter eggs (player 1 always spawns as Richtofen).
 
 For more info about this mod, read the associated Steam [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3041320930).
 
