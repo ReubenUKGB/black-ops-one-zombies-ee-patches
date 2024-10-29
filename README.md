@@ -10,7 +10,6 @@ If using Plutonium, extract and copy _"Zombies EE Patches"_ to the _"%localappda
 Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ if using Game_Mod or _"%localappdata%\Plutonium\storage\t5\mods"_ if using Plutonium and delete the _"Zombies EE Patches"_ folder.
 
 **Known bugs:**
-- None.
 - No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
 
 **Ascension:**</br>
