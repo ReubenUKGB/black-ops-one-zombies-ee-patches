@@ -3,7 +3,7 @@
 These mods require [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run.
 
 **How to install:**</br>
-Download the _Game_Mod Compatible_ zip file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, then extract and copy _"Zombies EE Patches"_ to the _"steamapps\common\Call of Duty Black Ops\mods"_ (if the mods folder doesn't exist then make one) folder.
+Download the _Game_Mod Compatible_ zip file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, then extract and copy _"Zombies EE Patches"_ to the _"steamapps\common\Call of Duty Black Ops\mods"_ folder (if the mods folder doesn't exist then make one).
 
 **How to uninstall:**</br>
 Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the _"Zombies EE Patches"_ folder.
