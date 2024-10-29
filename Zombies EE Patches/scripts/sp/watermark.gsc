@@ -6,9 +6,9 @@ main()
     switch (getdvar("mapname"))
 	{
         case "zombie_coast":
-		case "zombie_cosmodrome":
-		case "zombie_temple":
-		case "zombie_moon":
+        case "zombie_cosmodrome":
+        case "zombie_temple":
+        case "zombie_moon":
             thread on_player_connect();
             return;
 	}
