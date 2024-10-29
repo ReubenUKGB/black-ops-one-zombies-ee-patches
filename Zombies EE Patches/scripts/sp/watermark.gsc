@@ -16,15 +16,15 @@ main()
 
 on_player_connect()
 {
-    enable_watermark = 1;
+    enable_watermark_loop = 1;
     
     for (;;)
     {
-        if (enable_watermark == 1)
+        if (enable_watermark_loop == 1)
         {
-            level waittill( "connected", player );
+            level waittill("connected", player);
 
-            enable_watermark = 0;
+            enable_watermark_loop = 0;
 
             player thread show_watermark();
         }    
