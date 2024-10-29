@@ -3,10 +3,10 @@
 This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
 
 **How to install:**</br>
-Download the _Game_Mod Compatible_ zip file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, then extract and copy _"Zombies EE Patches"_ to the _"steamapps\common\Call of Duty Black Ops\mods"_ folder (if the mods folder doesn't exist then make one).
+Download the _Game_Mod Compatible_ zip file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, then extract and copy _"Zombies EE Patches"_ to the _"steamapps\common\Call of Duty Black Ops\mods"_ folder (if the mods folder doesn't exist then make one). If using Plutonium, extract _"Zombies EE Patches"_ to the _"%localappdata%\Plutonium\storage\t5\mods"_ folder (if the mods folder doesn't exist then make one).
 
 **How to uninstall:**</br>
-Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ and delete the _"Zombies EE Patches"_ folder.
+Navigate to _"steamapps\common\Call of Duty Black Ops\mods"_ or _"%localappdata%\Plutonium\storage\t5\mods"_ and delete the _"Zombies EE Patches"_ folder.
 
 **Known bugs:**
 - None.
