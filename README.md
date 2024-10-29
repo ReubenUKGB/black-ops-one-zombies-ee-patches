@@ -1,6 +1,6 @@
 # Black Ops 1: Zombies EE patches (Steam compatible)
 
-These mods work with the Steam version of the game.
+This mod works with the Steam version of the game.
 
 **How to install:**</br>
 Download the appropriate file from the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases) section, then extract and copy the .ff files to the _"steamapps\common\Call of Duty Black Ops\zone\Common"_ folder.
