@@ -3,7 +3,7 @@
 
 main()
 {
-    switch (getdvar("mapname"))
+    switch (GetDvar("mapname"))
 	{
         case "zombie_coast":
         case "zombie_cosmodrome":
