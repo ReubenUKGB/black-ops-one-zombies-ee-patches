@@ -1,5 +1,4 @@
 #include common_scripts\utility;
-#include maps\_utility;
 
 main()
 {
@@ -10,7 +9,7 @@ main()
         case "zombie_temple":
         case "zombie_moon":
             thread on_player_connect();
-            return;
+            break;
 	}
 }
 
@@ -37,5 +36,5 @@ show_watermark()
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
     mod_info.alpha = 0.5;
-    mod_info SetText("Zombies EE Patches v1.1.2");
+    mod_info SetText("Black Ops 1: Zombies EE Patches v1.1.3");
 }
