@@ -4,7 +4,7 @@
 - Enables the ability to complete the Easter eggs in solo or with any amount of players.
 - No Easter egg steps are skipped
 - Easter eggs from previous maps need to be completed.
-- Achievements can be unlocked.
+- Achievements can be unlocked by completing the Easter eggs.
 
 **Note:** This version of the mod works with the Steam version of the game.
 
