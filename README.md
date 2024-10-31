@@ -4,7 +4,7 @@
 - Enables the ability to complete the Easter eggs in solo or with any amount of players.
 - No Easter egg steps are skipped
 - Easter eggs from previous maps need to be completed.
-- Achievements can be unlocked if loading the mod via Game_Mod instead of Plutonium.
+- Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of Plutonium.
 
 **Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
 
