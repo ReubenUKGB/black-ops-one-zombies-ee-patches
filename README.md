@@ -1,6 +1,10 @@
 # Black Ops 1: Zombies EE patches (Steam compatible)
 
-These patches enable the ability to complete the Easter eggs in solo or with any amount of players (no steps are skipped) and will unlock achievements upon completion. Full instructions and changes included in the mod is available on the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases/tag/v1.1.3-black-ops-one-zombies-ee-patches-steam_compatible) section.
+**What this mod does:**
+- Enables the ability to complete the Easter eggs in solo or with any amount of players.
+- No Easter egg steps are skipped
+- Easter eggs from previous maps need to be completed.
+- Achievements can be unlocked if loading the mod via Game_Mod or using the legacy mod version instead of Plutonium.
 
 **Note:** This version of the mod works with the Steam version of the game.
 
