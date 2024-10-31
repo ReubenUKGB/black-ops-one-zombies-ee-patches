@@ -2,6 +2,8 @@
 
 These patches enable the ability to complete the Easter eggs in solo or with any amount of players (no steps are skipped) and will unlock achievements upon completion. Full instructions and changes included in the mod is available on the [releases](https://github.com/ReubenUKGB/black-ops-one-zombies-ee-patches/releases/tag/v1.1.3-black-ops-one-zombies-ee-patches-game_mod_compatible) section.
 
+**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
+
 **Ascension EE Changes:**
 The Casimir Mechanism Easter egg now works with any amount of players, the buttons step now gives players 100 seconds to press all 4 buttons when not in a 4 player game, the lunar lander step is solo-able (the LUNA letters are at their original positions in coop) after the pressure plate step (in order: ride the lander near the Revive perk to grab the letter L, ride the lander near the Stamin-Up perk to grab the letter U, ride the lander near the Speed-Cola perk to grab the letter N and ride the lander near the PhD perk to grab the letter A) and the freeing Gersh step only requires the upgraded Zeus Cannon, upgraded Ray Gun and Gersh Device when playing solo.
 
