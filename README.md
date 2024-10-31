@@ -4,7 +4,7 @@
 - Enables the ability to complete the Easter eggs in solo or with any amount of players.
 - No Easter egg steps are skipped
 - Easter eggs from previous maps need to be completed.
-- Achievements can be unlocked if loading the mod via Game_Mod or using the legacy mod version instead of Plutonium.
+- Achievements can be unlocked.
 
 **Note:** This version of the mod works with the Steam version of the game.
 
