@@ -3,7 +3,7 @@
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
 - No Easter egg steps are skipped
-- Easter eggs from previous maps need to be completed
+- Easter eggs from previous maps need to be completed (like in the vanilla version of the game)
 - Achievements can be unlocked by completing the Easter eggs
 
 **Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
