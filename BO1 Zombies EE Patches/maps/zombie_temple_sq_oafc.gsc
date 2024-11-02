@@ -589,10 +589,6 @@ oafc_trigger_thread(tiles, set)
 								tile_activated = false; // Deactivate the tile
 
 								activation_time = 0; // Reset activation time
-
-								level._picked_tile1 playsound("evt_sq_oafc_glyph_wrong");
-
-								level._picked_tile2 playsound("evt_sq_oafc_glyph_wrong");
 							}
 						
 													
