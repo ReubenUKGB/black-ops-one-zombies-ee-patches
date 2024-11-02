@@ -36,5 +36,5 @@ show_watermark()
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
     mod_info.alpha = 0.5;
-    mod_info SetText("BO1: Zombies EE Patches v1.1.3");
+    mod_info SetText("BO1: Zombies EE Patches v1.2");
 }
