@@ -244,9 +244,9 @@ knock_on_door()
 
 		for(i=0; i < players.size; i++)
 		{
-			players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+			players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
 
-			players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+			players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
 		}
 
 		if( level.door_knock_vox_occurring )
@@ -2617,7 +2617,7 @@ capricorn()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
 	}
 	
 	// SCRIPT: AWARD THE ACHIEVEMENT AND STUFF

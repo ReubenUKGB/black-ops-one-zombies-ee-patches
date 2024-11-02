@@ -93,7 +93,7 @@ reward()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
 	}
 	
 	players = get_players();
@@ -343,9 +343,9 @@ sidequest_logic()
 
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
 
-		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
 	}
 	
 	stage_start("sq", "osc");
