@@ -7,8 +7,6 @@
 - Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of Plutonium
 - Adds a EE speedrun timer
 
-**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
-
 **Ascension EE Changes:**
 - The Casimir Mechanism Easter egg now works with any amount of players
 
@@ -38,3 +36,5 @@
 - Still requires the completion of previous Easter eggs
 
 - Player 1 always spawns as Richtofen
+
+**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
