@@ -408,6 +408,22 @@ sundial_monitor()
 		
 		level._sundial_active = true;
 		
+		sundial_first_activated = false;
+
+		if(sundial_first_activated == false)
+		{
+			players = get_players();
+
+			for(i=0; i < players.size; i++)
+			{
+				players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+
+				players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+			}
+
+			sundial_first_activated = true;
+		}
+		
 		self playsound( "evt_sq_gen_transition_start" );
 		self playsound( "evt_sq_gen_sundial_emerge" );
 		self moveto(self.original_pos, 0.25);
@@ -865,6 +881,15 @@ sidequest_done()
 		{
 			who._has_anti115 = true;
 			
+			level.easter_egg_speedrun_timer_count_started Destroy();
+
+			players = get_players();
+			
+			for(i=0; i < players.size; i++)
+			{
+				players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+			}
+
 			who PlaySound( "zmb_meteor_activate" );
 			who thread reward();
 			who thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest8", undefined, 7 );

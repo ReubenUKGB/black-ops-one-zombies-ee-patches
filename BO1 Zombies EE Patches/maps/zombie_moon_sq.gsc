@@ -86,6 +86,15 @@ init()
 reward()
 {
 	level notify("moon_sidequest_achieved");
+
+	level.easter_egg_speedrun_timer_count_started Destroy();
+	
+	players = get_players();
+	
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+	}
 	
 	players = get_players();
 	
@@ -329,6 +338,15 @@ sidequest_logic()
 	stage_start("sq", "ss1");
 
 	flag_wait("ss1");
+	
+	players = get_players();
+
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+	}
 	
 	stage_start("sq", "osc");
 	level waittill("sq_osc_over");

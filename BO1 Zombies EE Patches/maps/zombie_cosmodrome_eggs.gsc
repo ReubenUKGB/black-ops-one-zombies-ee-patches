@@ -83,7 +83,6 @@ init()
 	}
 
 	luna_letters_spawn();
-
 /*
 	// SP Testing give weapons
 	if ( IsDefined( level.sp_egg_testing ) )
@@ -118,7 +117,7 @@ init()
 
 luna_letters_spawn()
 {
-	flag_wait( "all_players_connected" );
+	flag_wait("all_players_connected");
 	
 	if (getPlayers().size < 2) {
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
@@ -192,6 +191,15 @@ teleport_target_event()
 
 	teleport_target_spark Delete();
 	level.black_hole_bomb_loc_check_func = undefined;
+
+	players = get_players();
+
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+	}
 
     level thread play_egg_vox( "vox_ann_egg1_success", "vox_gersh_egg1", 1 );
 }
@@ -396,7 +404,7 @@ switch_watcher()
 	{
 		level waittill( "sync_button_pressed" );
 
-		timeout = GetTime() + 500;	// in milliseconds
+		timeout = GetTime(); // in milliseconds
 
 		if ( getPlayers().size <= 3 )
 		{
@@ -945,6 +953,15 @@ soul_release( model, origin )
 	time = 20;
 	
 	model waittill( "death" );
+
+    level.easter_egg_speedrun_timer_count_started Destroy();
+
+	players = get_players();
+	
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\sp\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+	}
 	
 	level thread play_egg_vox( "vox_ann_egg6_success", "vox_gersh_egg6_success", 9 );
 	level thread wait_for_gersh_vox();
