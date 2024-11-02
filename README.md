@@ -5,7 +5,7 @@
 - No Easter egg steps are skipped
 - Easter eggs from previous maps need to be completed (like in the vanilla version of the game)
 - Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of Plutonium
-- Adds a EE speedrun timer
+- Adds a Easter egg speedrun timer for the main Easter eggs
 
 **Ascension EE Changes:**
 - The Casimir Mechanism Easter egg now works with any amount of players
