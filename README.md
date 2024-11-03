@@ -7,6 +7,9 @@
 - Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of loading the mod through Plutonium
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
+**General Changes:**
+* Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
+
 **Ascension EE Changes:**
 - The Casimir Mechanism Easter egg now works with any amount of players
 
