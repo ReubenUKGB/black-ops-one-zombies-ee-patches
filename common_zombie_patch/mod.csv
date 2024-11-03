@@ -69,4 +69,6 @@ rawfile,maps/_zombiemode_weap_thundergun.gsc
 rawfile,maps/_zombiemode_weapons.gsc
 rawfile,maps/_zombiemode_zone_manager.gsc
 rawfile,maps/_zombiemode.gsc
+rawfile,scripts/easter_egg_speedrun_timer.gsc
+rawfile,scripts/watermark.gsc
 rawfile,radiant/keys.txt

@@ -86,15 +86,9 @@ onPlayerConnect()
 
 		player thread claymore_to_notsolid();
 
-		switch (GetDvar("mapname"))
-		{
-			case "zombie_coast":
-			case "zombie_cosmodrome":
-			case "zombie_temple":
-			case "zombie_moon":
-				player thread show_watermark();
-				break;
-		}	
+		player thread scripts\easter_egg_speedrun_timer::init();
+		
+		player thread scripts\watermark::main();
 	}
 }
 
@@ -113,21 +107,6 @@ claymore_to_notsolid()
 	}
 }
 
-show_watermark()
-{
-    flag_wait("all_players_connected");
-    mod_info = NewClientHudElem(self);
-    mod_info.foreground = true;
-    mod_info.hidewheninmenu = true;
-    mod_info.y = 0;
-    mod_info.x = 5;
-    mod_info.alignX = "left";
-    mod_info.alignY = "bottom";
-    mod_info.horzAlign = "left";
-    mod_info.vertAlign = "bottom";
-    mod_info.alpha = 0.5;
-    mod_info SetText("BO1: Zombies EE Patches v1.1.3");
-}
 
 //Cheaters logic added here because its a small file (for any ffotd updates)
 //TODO: Next game move to its own file

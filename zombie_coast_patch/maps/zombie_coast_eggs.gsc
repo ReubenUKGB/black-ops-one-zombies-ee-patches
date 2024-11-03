@@ -239,7 +239,16 @@ knock_on_door()
 	while( 1 )
 	{
 		knock_trig waittill( "damage", i_amt, e_inflictor, vec_direction, vec_point, mod_type );
-		
+
+		players = get_players();
+
+		for(i=0; i < players.size; i++)
+		{
+			players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+
+			players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+		}
+
 		if( level.door_knock_vox_occurring )
 		{
 			wait( 1.0 );
@@ -2601,6 +2610,15 @@ capricorn()
 	flag_set( "dmf" );	
 	
 	level notify( "scrambled" );
+
+    level.easter_egg_speedrun_timer_count_started Destroy();
+
+	players = get_players();
+	
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+	}
 	
 	// SCRIPT: AWARD THE ACHIEVEMENT AND STUFF
 	level notify( "coast_easter_egg_achieved" );
