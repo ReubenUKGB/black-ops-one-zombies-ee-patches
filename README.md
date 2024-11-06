@@ -1,5 +1,9 @@
 # Black Ops 1: Zombies EE Patches (Legacy Mod)
 
+**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
+
+**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
+
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
 - No Easter egg steps are skipped
@@ -42,7 +46,3 @@
 
 **Known bugs:**
 - The Mule Kick perk is bugged and doesn't work properly.
-
-**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
-
-**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
