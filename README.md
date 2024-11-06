@@ -40,9 +40,9 @@
 
 - Player 1 always spawns as Richtofen
 
-**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
-
 **Known bugs:**
 - The Mule Kick perk is bugged and doesn't work properly.
+
+**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
 
 **Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
