@@ -1,5 +1,7 @@
 # Black Ops 1: Zombies EE Patches (Game_Mod Compatible)
 
+**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
+
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
 - No Easter egg steps are skipped
@@ -40,4 +42,5 @@
 
 - Player 1 always spawns as Richtofen
 
-**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
+**Known bugs:**
+- No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
