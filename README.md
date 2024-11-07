@@ -49,5 +49,5 @@
 
 |Command|Description|Default Value|Example Console Command Usage|Example Player Config Command Usage|
 |:---:|:---:|:---:|:---:|:---:|
-|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`0`|`cg_renderWatermark 1`|`seta cg_renderWatermark "1"`|
-|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`0`|`cg_renderSpeedrunTimer 1`|`seta cg_renderSpeedrunTimer "1"`|
+|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`1`|`cg_renderWatermark 0`|`seta cg_renderWatermark "0"`|
+|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`1`|`cg_renderSpeedrunTimer 0`|`seta cg_renderSpeedrunTimer "0"`|
