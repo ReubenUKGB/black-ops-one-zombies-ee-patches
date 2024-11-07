@@ -8,24 +8,13 @@ main()
         case "zombie_cosmodrome":
         case "zombie_temple":
         case "zombie_moon":
-            thread on_player_connect();
+            thread scripts\init_scripts::on_player_connect();
             break;
 	}
 }
 
-on_player_connect()
-{ 
-    for (;;)
-    {
-        level waittill("connected", player);
-
-        player thread show_watermark();
-    }
-}
-
-show_watermark()
+mod_watermark()
 {
-    flag_wait("all_players_connected");
     mod_info = NewClientHudElem(self);
     mod_info.foreground = true;
     mod_info.hidewheninmenu = true;
@@ -35,6 +24,19 @@ show_watermark()
     mod_info.alignY = "bottom";
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
-    mod_info.alpha = 0.5;
-    mod_info SetText("BO1: Zombies EE Patches v1.2");
+    mod_info SetText("BO1: Zombies EE Patches v1.3");
+
+    for (;;)
+    {
+        if (getDvar("cg_renderWatermark") == "1")
+        {
+            mod_info.alpha = 0.5;
+        }
+        else if (getDvar("cg_renderWatermark") == "0")
+        {
+            mod_info.alpha = 0;
+        }
+        
+        wait 0.1;
+    }
 }

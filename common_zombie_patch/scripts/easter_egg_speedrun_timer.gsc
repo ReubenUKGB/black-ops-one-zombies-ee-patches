@@ -1,6 +1,6 @@
 #include common_scripts\utility;
 
-init()
+main()
 {   
     level.easter_egg_speedrun_time = 0;
 
@@ -22,8 +22,21 @@ easter_egg_speedrun_timer_text_started()
     level.easter_egg_speedrun_timer_text_started.alignY = "middle";
     level.easter_egg_speedrun_timer_text_started.horzAlign = "left";
     level.easter_egg_speedrun_timer_text_started.vertAlign = "middle";
-    level.easter_egg_speedrun_timer_text_started.alpha = 1;
     level.easter_egg_speedrun_timer_text_started SetText("EE Speedrun Time Elapsed:");
+
+    for (;;)
+    {
+        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        {
+            level.easter_egg_speedrun_timer_text_started.alpha = 1;
+        }
+        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        {
+            level.easter_egg_speedrun_timer_text_started.alpha = 0;
+        }
+        
+        wait 0.1;
+    }
 }
 
 easter_egg_speedrun_timer_count_started()
@@ -37,9 +50,22 @@ easter_egg_speedrun_timer_count_started()
     level.easter_egg_speedrun_timer_count_started.alignY = "middle";
     level.easter_egg_speedrun_timer_count_started.horzAlign = "left";
     level.easter_egg_speedrun_timer_count_started.vertAlign = "middle";
-    level.easter_egg_speedrun_timer_count_started.alpha = 1;
     level.easter_egg_speedrun_timer_count_started.color = (255, 255, 0); 
     level.easter_egg_speedrun_timer_count_started SetTimerUp(level.easter_egg_speedrun_time);
+
+    for (;;)
+    {
+        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        {
+            level.easter_egg_speedrun_timer_count_started.alpha = 1;
+        }
+        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        {
+            level.easter_egg_speedrun_timer_count_started.alpha = 0;
+        }
+        
+        wait 0.1;
+    }
 
     level.easter_egg_speedrun_started_time = GetTime();
 }
@@ -94,7 +120,20 @@ easter_egg_speedrun_timer_count_finished()
     level.easter_egg_speedrun_timer_count_finished.alignY = "middle";
     level.easter_egg_speedrun_timer_count_finished.horzAlign = "left";
     level.easter_egg_speedrun_timer_count_finished.vertAlign = "middle";
-    level.easter_egg_speedrun_timer_count_finished.alpha = 1;
     level.easter_egg_speedrun_timer_count_finished.color = (255, 255, 0); 
     level.easter_egg_speedrun_timer_count_finished SetText(easter_egg_speedrun_formatted_time);
+
+    for (;;)
+    {
+        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        {
+            level.easter_egg_speedrun_timer_count_finished.alpha = 1;
+        }
+        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        {
+            level.easter_egg_speedrun_timer_count_finished.alpha = 0;
+        }
+        
+        wait 0.1;
+    }
 }
