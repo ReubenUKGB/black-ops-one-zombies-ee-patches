@@ -44,5 +44,5 @@
 
 - Player 1 always spawns as Richtofen
 
-**Known bugs:**
+**Known Issues:**
 - The Mule Kick perk is bugged and doesn't work properly.
