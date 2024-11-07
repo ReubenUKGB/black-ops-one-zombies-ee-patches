@@ -44,3 +44,10 @@
 
 **Known bugs:**
 - No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
+
+## Commands
+
+|Command|Description|Default Value|Example Console Command Usage|Example Player Config Command Usage|
+|:---:|:---:|:---:|:---:|:---:|
+|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`0`|`cg_renderWatermark 1`|`seta cg_renderWatermark "1"`|
+|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`0`|`cg_renderSpeedrunTimer 1`|`seta cg_renderSpeedrunTimer "1"`|
