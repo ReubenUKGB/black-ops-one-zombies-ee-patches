@@ -46,3 +46,10 @@
 
 **Known Issues:**
 - The Mule Kick perk is bugged and doesn't work properly.
+
+## Commands
+
+|Command|Description|Default Behaviour|Default Value|Example Player Config Command Usage|
+|:---:|:---:|:---:|:---:|:---:|
+|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_renderWatermark "0"`|
+|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_renderSpeedrunTimer "0"`|
