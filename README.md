@@ -42,7 +42,7 @@
 
 - Player 1 always spawns as Richtofen
 
-**Known bugs:**
+**Known Issues:**
 - No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
 
 ## Commands
