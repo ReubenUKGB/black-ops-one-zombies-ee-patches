@@ -86,7 +86,7 @@ onPlayerConnect()
 
 		player thread claymore_to_notsolid();
 
-		player thread scripts\easter_egg_speedrun_timer::init();
+		player thread scripts\easter_egg_speedrun_timer::main();
 		
 		player thread scripts\watermark::main();
 	}
