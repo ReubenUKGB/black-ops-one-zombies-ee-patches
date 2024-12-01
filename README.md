@@ -6,9 +6,13 @@
 
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
+  
 - No Easter egg steps are skipped
+  
 - Easter eggs from previous maps need to be completed (like in the vanilla version of the game)
+  
 - Achievements can be unlocked by completing the Easter eggs
+  
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
 **General Changes:**
