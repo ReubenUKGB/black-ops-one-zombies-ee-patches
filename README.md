@@ -7,7 +7,7 @@
   
 - No Easter egg steps are skipped
   
-- Easter eggs from previous maps need to be completed (like in the vanilla version of the game)
+- The Ensemble Cast and Time Travel Will Tell Easter eggs need to be completed in order to complete the Richtofen's Grand Scheme Easter egg (like in the vanilla version of the game)
   
 - Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of loading the mod through Plutonium
   
@@ -42,7 +42,7 @@
 **Moon EE Changes:**
 - The Richtofen's Grand Scheme Easter egg now works with any amount of players
 
-- Still requires the completion of previous Easter eggs
+- Still requires the completion of the Ensemble Cast and Time Travel Will Tell Easter eggs
 
 - Player 1 always spawns as Richtofen
 
