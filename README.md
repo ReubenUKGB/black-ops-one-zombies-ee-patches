@@ -2,17 +2,15 @@
 
 ![zombieseepatches](https://github.com/user-attachments/assets/de9ca755-27b9-4520-84b6-de2014070132)
 
-**Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
-
-**What this mod does:**
+## What this mod does
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
   
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
-**General Changes:**
+## General Changes
 * Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
 
-**Ascension EE Changes:**
+## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
 
 - The buttons step now gives players 100 seconds to press all 4 buttons when not in a 4 player game
@@ -21,12 +19,12 @@
 
 - The freeing Gersh step only requires the upgraded Zeus Cannon, upgraded Ray Gun and Gersh Device when playing solo
 
-**Call of the Dead EE Changes:**
+## Call of the Dead EE Changes
 - The co-op version of the Ensemble Cast Easter egg now works in solo
 
 - You no longer have to knife the frozen vodka bottle, you can shoot at the ice encased around it to dislodge it whilst standing below it to catch it in solo, when in co-op the ice encased around the vodka bottle still needs to be knifed
 
-**Shangri-La EE Changes:**
+## Shangri-La EE Changes
 - The Time Travel Will Tell Easter egg now works with any amount of players
 
 - In solo mode the tile matching step now gives the player 100 seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles)
@@ -35,17 +33,17 @@
 
 - Player 1 always spawns as Richtofen
 
-**Moon EE Changes:**
+## Moon EE Changes
 - The Richtofen's Grand Scheme Easter egg now works with any amount of players
 
 - Still requires the completion of the Ensemble Cast and Time Travel Will Tell Easter eggs
 
 - Player 1 always spawns as Richtofen
 
-**Known Issues:**
+## Known Issues
 - No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
 
-**F.A.Q**
+## F.A.Q
 
 **Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
 
@@ -69,3 +67,6 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |`cg_drawWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`cg_drawWatermark 0`|`seta cg_drawWatermark "0"`|
 |`cg_drawSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`cg_drawSpeedrunTimer 0`|`seta cg_drawSpeedrunTimer "0"`|
+
+## Note
+This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
