@@ -69,4 +69,4 @@
 |`cg_drawSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`cg_drawSpeedrunTimer 0`|`seta cg_drawSpeedrunTimer "0"`|
 
 ## Note
-This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
+This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Call of Duty: Black Ops in order to run, but it also works with [Plutonium](https://plutonium.pw/).
