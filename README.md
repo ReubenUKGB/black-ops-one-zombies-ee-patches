@@ -9,12 +9,6 @@
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
   
-- No Easter egg steps are skipped
-  
-- The Ensemble Cast and Time Travel Will Tell Easter eggs need to be completed in order to complete the Richtofen's Grand Scheme Easter egg (like in the vanilla version of the game)
-  
-- Achievements can be unlocked by completing the Easter eggs
-  
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
 **General Changes:**
@@ -52,6 +46,28 @@
 
 **Known Issues:**
 - The Mule Kick perk is bugged and doesn't work properly.
+
+**F.A.Q**
+
+**Q:** Does this mod affect achievement unlocks?
+
+**A:** No, achievements can still be unlocked.
+
+**Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
+
+**A:** Yes, the Ensemble Cast and Time Travel Will Tell Easter eggs need to be completed in order to complete the Richtofen's Grand Scheme Easter egg.
+
+**Q:** Does the mod support other versions of Call of Duty: Black Ops?
+
+**A:** No, only the Steam version of the game is supported.
+
+**A:** Does this mod skip any steps of the Easter eggs?
+
+**Q:** No Easter egg steps are skipped.
+
+**Q:** Is this mod compatible with other mods?
+
+**A:** This mod isn't compatible with other mods that override the same `.ff` files.
 
 ## Commands
 
