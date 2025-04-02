@@ -1,5 +1,7 @@
 # Black Ops 1: Zombies EE Patches (Game_Mod Compatible)
 
+![zombieseepatches](https://github.com/user-attachments/assets/de9ca755-27b9-4520-84b6-de2014070132)
+
 **Note:** This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Black Ops 1 in order to run, but it also works with [Plutonium](https://plutonium.pw/).
 
 **What this mod does:**
