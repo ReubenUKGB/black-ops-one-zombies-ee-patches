@@ -47,7 +47,7 @@
 
 **Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
 
-**A:** Yes, the Call of the Dead and Shangri-La Easter eggs need to be completed in order to complete the Easter egg in Moon.
+**A:** Yes, the Call of the Dead and Shangri-La Easter eggs need to be completed in order to do the Easter egg in Moon.
 
 **Q:** Does the mod support other versions of Call of Duty: Black Ops?
 
