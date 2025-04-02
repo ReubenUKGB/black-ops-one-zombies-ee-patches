@@ -2,10 +2,6 @@
 
 ![zombieseepatches](https://github.com/user-attachments/assets/6bcac2c1-e19a-4cce-9f00-eb054413f4a7)
 
-**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it.
-
-**Optional:** Compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
-
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
   
@@ -55,7 +51,7 @@
 
 **Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
 
-**A:** Yes, the Call of the Dead and Shangri-La Easter eggs need to be completed in order to complete the Easter egg in Moon.
+**A:** Yes, Call of the Dead and Shangri-La Easter eggs need to be completed to complete the Easter egg in Moon.
 
 **Q:** Does the mod support other versions of Call of Duty: Black Ops?
 
@@ -75,3 +71,5 @@
 |:---:|:---:|:---:|:---:|:---:|
 |`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_renderWatermark "0"`|
 |`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_renderSpeedrunTimer "0"`|
+
+**Note:** This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
