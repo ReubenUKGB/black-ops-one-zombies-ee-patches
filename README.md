@@ -7,12 +7,6 @@
 **What this mod does:**
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
   
-- No Easter egg steps are skipped
-  
-- The Ensemble Cast and Time Travel Will Tell Easter eggs need to be completed in order to complete the Richtofen's Grand Scheme Easter egg (like in the vanilla version of the game)
-  
-- Achievements can be unlocked by completing the Easter eggs, if loading the mod via Game_Mod instead of loading the mod through Plutonium
-  
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
 **General Changes:**
