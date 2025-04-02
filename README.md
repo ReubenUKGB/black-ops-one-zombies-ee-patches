@@ -2,15 +2,15 @@
 
 ![zombieseepatches](https://github.com/user-attachments/assets/6bcac2c1-e19a-4cce-9f00-eb054413f4a7)
 
-**What this mod does:**
+## What this mod does
 - Enables the ability to complete the Easter eggs in solo or with any amount of players
   
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
-**General Changes:**
+## General Changes
 * Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
 
-**Ascension EE Changes:**
+## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
 
 - The buttons step now gives players 100 seconds to press all 4 buttons when not in a 4 player game
@@ -19,12 +19,12 @@
 
 - The freeing Gersh step only requires the upgraded Zeus Cannon, upgraded Ray Gun and Gersh Device when playing solo
 
-**Call of the Dead EE Changes:**
+## Call of the Dead EE Changes
 - The co-op version of the Ensemble Cast Easter egg now works in solo
 
 - You no longer have to knife the frozen vodka bottle, you can shoot at the ice encased around it to dislodge it whilst standing below it to catch it in solo, when in co-op the ice encased around the vodka bottle still needs to be knifed
 
-**Shangri-La EE Changes:**
+## Shangri-La EE Changes
 - The Time Travel Will Tell Easter egg now works with any amount of players
 
 - In solo mode the tile matching step now gives the player 100 seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles)
@@ -33,17 +33,17 @@
 
 - Player 1 always spawns as Richtofen
 
-**Moon EE Changes:**
+## Moon EE Changes
 - The Richtofen's Grand Scheme Easter egg now works with any amount of players
 
 - Still requires the completion of the Ensemble Cast and Time Travel Will Tell Easter eggs
 
 - Player 1 always spawns as Richtofen
 
-**Known Issues:**
+## Known Issues
 - The Mule Kick perk is bugged and doesn't work properly.
 
-**F.A.Q**
+## F.A.Q
 
 **Q:** Does this mod affect achievement unlocks?
 
@@ -72,7 +72,5 @@
 |`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_renderWatermark "0"`|
 |`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_renderSpeedrunTimer "0"`|
 
-##
-
-**Note:**
+## Note
 This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using Call of Duty: Black Ops - Mod Tools (BETA): steam://install/42740
