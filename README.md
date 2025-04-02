@@ -73,4 +73,4 @@
 |`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_renderSpeedrunTimer "0"`|
 
 ## Note
-This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using Call of Duty: Black Ops - Mod Tools (BETA): _`steam://install/4274`_
+This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using the _`Call of Duty: Black Ops - Mod Tools (BETA)`_ on Steam.
