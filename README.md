@@ -45,6 +45,24 @@
 **Known Issues:**
 - No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
 
+**F.A.Q**
+
+**Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
+
+**A:** Yes, the Call of the Dead and Shangri-La Easter eggs need to be completed in order to complete the Easter egg in Moon.
+
+**Q:** Does the mod support other versions of Call of Duty: Black Ops?
+
+**A:** No, only the Steam version of the game is supported.
+
+**A:** Does this mod skip any steps of the Easter eggs?
+
+**Q:** No Easter egg steps are skipped.
+
+**Q:** Is this mod compatible with other mods?
+
+**A:** This mod isn't compatible with other mods that override the same `.gsc` files.
+
 ## Commands
 
 |Command|Description|Default Behaviour|Default Value|Example Console Command Usage|Example Player Config Command Usage|
