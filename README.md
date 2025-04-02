@@ -1,4 +1,4 @@
-# Black Ops 1: Zombies EE Patches (Game_Mod Compatible)
+# Black Ops 1: Zombies EE Patches (Game_Mod Version)
 
 ![zombieseepatches](https://github.com/user-attachments/assets/de9ca755-27b9-4520-84b6-de2014070132)
 
