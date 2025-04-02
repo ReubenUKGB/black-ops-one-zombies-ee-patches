@@ -63,7 +63,7 @@
 
 **Q:** Is this mod compatible with other mods?
 
-**A:** This mod isn't compatible with other mods that override the same `.ff` files.
+**A:** This mod isn't compatible with other mods that override the same _`.ff`_ files.
 
 ## Commands
 
