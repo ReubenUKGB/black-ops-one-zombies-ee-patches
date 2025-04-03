@@ -13,7 +13,7 @@
 ## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
 
-- The buttons step now gives players 100 seconds to press all four buttons when not in a four player game
+- The buttons step now gives players one hundred seconds to press all four buttons when not in a four player game
 
 - The lunar lander step is solo-able (the LUNA letters are at their original positions in coop) after the pressure plate step (in order: ride the lander near the Revive perk to grab the letter L, ride the lander near the Stamin-Up perk to grab the letter U, ride the lander near the Speed-Cola perk to grab the letter N and ride the lander near the PhD perk to grab the letter A)
 
@@ -27,18 +27,18 @@
 ## Shangri-La EE Changes
 - The Time Travel Will Tell Easter egg now works with any amount of players
 
-- In solo mode the tile matching step now gives the player 100 seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles)
+- In solo mode the tile matching step now gives the player one hundred seconds to match each tile before they reset (standing on the tile activates the timer and symbol so that you can match tiles, crouching on the tile clears the symbol and stops the timer so that you can memorise which symbols are on what tiles)
 
-- Time in eclipse mode has been increased to 20 minutes during the tile matching step
+- Time in eclipse mode has been increased to twenty minutes during the tile matching step
 
-- Player 1 always spawns as Richtofen
+- Player one always spawns as Richtofen
 
 ## Moon EE Changes
 - The Richtofen's Grand Scheme Easter egg now works with any amount of players
 
 - Still requires the completion of the Ensemble Cast and Time Travel Will Tell Easter eggs
 
-- Player 1 always spawns as Richtofen
+- Player one always spawns as Richtofen
 
 ## Known Issues
 - The Mule Kick perk is bugged and doesn't work properly.
