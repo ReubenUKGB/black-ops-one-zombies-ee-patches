@@ -36,8 +36,6 @@
 ## Moon EE Changes
 - The Richtofen's Grand Scheme Easter egg now works with any amount of players
 
-- Still requires the completion of the Ensemble Cast and Time Travel Will Tell Easter eggs
-
 - Player one always spawns as Richtofen
 
 ## Known Issues
