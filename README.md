@@ -1,6 +1,6 @@
 # Black Ops: Zombies EE Patches (Game_Mod Version)
 
-![zombieseepatches](https://github.com/user-attachments/assets/f1d25b64-6199-43f5-af55-53c67627f278)
+![zombieseepatches](https://github.com/user-attachments/assets/c0963bf3-9414-4762-bcdb-5dc131b10f31)
 
 ## What this mod does
 - Enables the ability to complete the Easter eggs in solo or coop (without four players)
