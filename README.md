@@ -3,7 +3,7 @@
 ![zombieseepatches](https://github.com/user-attachments/assets/6bcac2c1-e19a-4cce-9f00-eb054413f4a7)
 
 ## What this mod does
-- Enables the ability to complete the Easter eggs in solo or with any amount of players
+- Enables the ability to complete the Easter eggs in solo or coop
   
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
