@@ -13,7 +13,7 @@
 ## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
 
-- The buttons step now gives players 100 seconds to press all 4 buttons when not in a 4 player game
+- The buttons step now gives players 100 seconds to press all four buttons when not in a four player game
 
 - The lunar lander step is solo-able (the LUNA letters are at their original positions in coop) after the pressure plate step (in order: ride the lander near the Revive perk to grab the letter L, ride the lander near the Stamin-Up perk to grab the letter U, ride the lander near the Speed-Cola perk to grab the letter N and ride the lander near the PhD perk to grab the letter A)
 
