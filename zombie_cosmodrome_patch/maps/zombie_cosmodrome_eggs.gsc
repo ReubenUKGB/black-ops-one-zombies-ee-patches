@@ -117,14 +117,24 @@ init()
 
 luna_letters_spawn()
 {
+
 	wait_network_frame();
 
 	flag_wait("all_players_connected");
+
+	wait_network_frame();
 	
 	if (getPlayers().size < 2) {
+
+		wait_network_frame();
+
 		level.lander_letters[ "l" ].origin += (-400, 1000, -600);
 
+		wait_network_frame();
+
 		level.lander_letters[ "n" ].origin += (0, 100, 100);
+
+		wait_network_frame();
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
 	}
