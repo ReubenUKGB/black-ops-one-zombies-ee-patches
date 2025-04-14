@@ -45,15 +45,15 @@
 
 **Q:** Does this mod affect achievement unlocks?
 
-**A:** No, achievements can still be unlocked.
+**A:** Achievements can still be unlocked.
 
 **Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
 
-**A:** Yes, Call of the Dead and Shangri-La Easter eggs need to be completed to do the Easter egg in Moon.
+**A:** Call of the Dead and Shangri-La Easter eggs need to be completed to do the Easter egg in Moon.
 
 **Q:** Does the mod support other versions of Call of Duty: Black Ops?
 
-**A:** No, only the Steam version of the game is supported.
+**A:** Only the Steam version of the game is officially supported.
 
 **A:** Does this mod skip any steps of the Easter eggs?
 
@@ -69,7 +69,7 @@
 
 **Q:** Can I launch Call of Duty: Black Ops - Multiplayer with this mod installed?
 
-**A:** No, it's not recommended to do so.
+**A:** It's not recommended to do so.
 
 ## Commands
 
