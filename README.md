@@ -38,10 +38,11 @@
 
 - Player one always spawns as Richtofen
 
-## Known Issues
-- No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
-
 ## F.A.Q
+
+**Q:** Does this mod affect achievement unlocks?
+
+**A:** No Steam achievements will be unlocked when using Plutonium due to the way Plutonium currently interacts with Steam and the game files.
 
 **Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
 
