@@ -50,7 +50,7 @@
 
 **Q:** Does the mod support other versions of Call of Duty: Black Ops?
 
-**A:** Only the Steam version of the game is officially supported.
+**A:** Only the Steam version of the game is officially supported, although other versions may work.
 
 **Q:** Does this mod skip any steps of the Easter eggs?
 
