@@ -61,7 +61,7 @@
 
 **Q:** Which guide do I use to help complete the Easter eggs with?
 
-**A:** Any guide will do so long as changes made by the mod is also followed.
+**A:** Any guide will do so long as changes made by the mod are also followed.
 
 **Q:** Is this mod compatible with other mods?
 
