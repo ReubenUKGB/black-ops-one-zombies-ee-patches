@@ -38,9 +38,6 @@
 
 - Player one always spawns as Richtofen
 
-## Known Issues
-- The Mule Kick perk is bugged and doesn't work properly.
-
 ## F.A.Q
 
 **Q:** Does this mod affect achievement unlocks?
