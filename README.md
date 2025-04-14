@@ -73,3 +73,5 @@
 
 ## Notes
 This version of the mod requires [Game_Mod](https://github.com/Nukem9/LinkerMod/releases/tag/v1.3.2) for Call of Duty: Black Ops in order to run, but it also works with [Plutonium](https://plutonium.pw/).
+
+Find any bugs, problems or have any suggestions? Please feel free to submit an issue or start a discussion.
