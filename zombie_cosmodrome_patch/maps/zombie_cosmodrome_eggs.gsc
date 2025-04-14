@@ -117,6 +117,8 @@ init()
 
 luna_letters_spawn()
 {
+	wait_network_frame();
+
 	flag_wait("all_players_connected");
 	
 	if (getPlayers().size < 2) {

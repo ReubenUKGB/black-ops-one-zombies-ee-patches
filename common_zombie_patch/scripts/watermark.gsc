@@ -2,7 +2,21 @@
 
 main()
 {
-    thread scripts\init_scripts::on_player_connect();
+    switch (GetDvar("mapname"))
+    {
+        case "zombie_cod5_prototype"
+        case "zombie_cod5_sumpf"
+        case "zombie_cod5_factory"
+        case "zombie_theater"
+        case "zombie_pentagon"
+        case "zombie_cosmodrome"
+        case "zombie_coast":
+        case "zombie_cosmodrome":
+        case "zombie_temple":
+        case "zombie_moon":
+            thread scripts\init_scripts::on_player_connect();
+            break;
+	}
 }
 
 mod_watermark()
