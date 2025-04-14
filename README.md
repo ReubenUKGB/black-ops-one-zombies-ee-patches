@@ -7,7 +7,7 @@
   
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
-- Adds Mule Kick back in when playing offline
+- Adds Mule Kick back in to every map when playing offline
 
 ## General Changes
 - Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
