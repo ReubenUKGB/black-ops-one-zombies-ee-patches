@@ -7,8 +7,11 @@
   
 - Adds a Easter egg speedrun timer for the main Easter eggs
 
+- Adds Mule Kick back in when playing offline
+
 ## General Changes
 * Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
+* Added a fully functional Mule Kick back into zombie maps when not connected to the Call of Duty: Black Ops servers
 
 ## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
@@ -38,9 +41,6 @@
 
 - Player one always spawns as Richtofen
 
-## Known Issues
-- The Mule Kick perk is bugged and doesn't work properly.
-
 ## F.A.Q
 
 **Q:** Does this mod affect achievement unlocks?
@@ -67,8 +67,8 @@
 
 |Command|Description|Default Behaviour|Default Value|Example Player Config Command Usage|
 |:---:|:---:|:---:|:---:|:---:|
-|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_renderWatermark "0"`|
-|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_renderSpeedrunTimer "0"`|
+|`cg_drawWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_drawWatermark "0"`|
+|`cg_drawSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_drawSpeedrunTimer "0"`|
 
 ## Note
 This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using the _`Call of Duty: Black Ops - Mod Tools (BETA)`_ on Steam.
