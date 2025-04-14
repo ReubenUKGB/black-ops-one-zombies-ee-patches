@@ -64,8 +64,8 @@
 
 |Command|Description|Default Behaviour|Default Value|Example Player Config Command Usage|
 |:---:|:---:|:---:|:---:|:---:|
-|`cg_renderWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_drawWatermark "0"`|
-|`cg_renderSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_drawSpeedrunTimer "0"`|
+|`cg_drawWatermark`| Toggles the visibility of the in-game watermark HUD element.|`Enabled`|`1`|`seta cg_drawWatermark "0"`|
+|`cg_drawSpeedrunTimer`| Toggles the visibility of the in-game EE Speedrun Timer HUD element.|`Enabled`|`1`|`seta cg_drawSpeedrunTimer "0"`|
 
 ## Note
 This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using the _`Call of Duty: Black Ops - Mod Tools (BETA)`_ on Steam.
