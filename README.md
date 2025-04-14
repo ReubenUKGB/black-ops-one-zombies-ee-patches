@@ -84,3 +84,5 @@
 
 ## Notes
 This version of the mod works with the vanilla version of the game without the need of Game_Mod or Plutonium to load it. You can also compile from source using the _`Call of Duty: Black Ops - Mod Tools (BETA)`_ on Steam.
+
+Find any bugs, problems or have any suggestions? Please feel free to submit an issue or start a discussion.
