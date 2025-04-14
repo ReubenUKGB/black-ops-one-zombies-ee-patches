@@ -13,11 +13,32 @@ main_start()
 	//Disable friends list and dev list from spaceman name if we want
 	//setsaveddvar( "r_zombieNameAllowFriendsList", "1" );
 	//setsaveddvar( "r_zombieNameAllowDevList", "1" );
+	
+    level.easter_egg_speedrun_time = 0;
+
+    level.easter_egg_speedrun_timer_text_started = undefined;
+
+    level.easter_egg_speedrun_timer_count_started = undefined;
+    
+    level.easter_egg_speedrun_timer_count_finished = undefined;
 }
 
 main_end()
 {
-	level thread onPlayerConnect();
+    switch (GetDvar("mapname"))
+	{
+        case "zombie_cod5_prototype":
+        case "zombie_cod5_sumpf":
+        case "zombie_cod5_factory":
+        case "zombie_theater":
+        case "zombie_pentagon":
+        case "zombie_cosmodrome":
+        case "zombie_coast":
+        case "zombie_temple":
+        case "zombie_moon":
+            level thread onPlayerConnect();
+            break;
+	}
 }
 
 onPlayerConnect()
@@ -28,9 +49,11 @@ onPlayerConnect()
 
 		player thread claymore_to_notsolid();
 
-		player thread scripts\easter_egg_speedrun_timer::main();
+        player setClientDvar("cg_drawWatermark", "1");
+        
+        player setClientDvar("cg_drawSpeedrunTimer", "1");
 		
-		player thread scripts\watermark::main();
+		player thread scripts\hud_elem::mod_watermark();
 	}
 }
 

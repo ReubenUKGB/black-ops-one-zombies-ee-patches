@@ -117,7 +117,6 @@ init()
 
 luna_letters_spawn()
 {
-
 	wait_network_frame();
 
 	flag_wait("all_players_connected");
@@ -208,9 +207,9 @@ teleport_target_event()
 
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_text_started();
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
 
-		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_started();
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
 	}
 
     level thread play_egg_vox( "vox_ann_egg1_success", "vox_gersh_egg1", 1 );
@@ -972,7 +971,7 @@ soul_release( model, origin )
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\easter_egg_speedrun_timer::easter_egg_speedrun_timer_count_finished();
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
 	}
 	
 	level thread play_egg_vox( "vox_ann_egg6_success", "vox_gersh_egg6_success", 9 );

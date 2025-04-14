@@ -1,16 +1,5 @@
 #include common_scripts\utility;
 
-main()
-{   
-    level.easter_egg_speedrun_time = 0;
-
-    level.easter_egg_speedrun_timer_text_started = undefined;
-
-    level.easter_egg_speedrun_timer_count_started = undefined;
-    
-    level.easter_egg_speedrun_timer_count_finished = undefined;
-}
-
 easter_egg_speedrun_timer_text_started()
 {
     level.easter_egg_speedrun_timer_text_started = NewClientHudElem(self);
@@ -132,6 +121,34 @@ easter_egg_speedrun_timer_count_finished()
         else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {
             level.easter_egg_speedrun_timer_count_finished.alpha = 0;
+        }
+        
+        wait 0.1;
+    }
+}
+
+mod_watermark()
+{
+    mod_info = NewClientHudElem(self);
+    mod_info.foreground = true;
+    mod_info.hidewheninmenu = true;
+    mod_info.y = 0;
+    mod_info.x = 5;
+    mod_info.alignX = "left";
+    mod_info.alignY = "bottom";
+    mod_info.horzAlign = "left";
+    mod_info.vertAlign = "bottom";
+    mod_info SetText("Black Ops: Zombies EE Patches v1.4");
+
+    for (;;)
+    {
+        if (getDvar("cg_drawWatermark") == "1")
+        {
+            mod_info.alpha = 0.5;
+        }
+        else if (getDvar("cg_drawWatermark") == "0")
+        {
+            mod_info.alpha = 0;
         }
         
         wait 0.1;
