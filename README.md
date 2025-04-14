@@ -63,6 +63,14 @@
 
 **A:** This mod isn't compatible with other mods that override the same _`.ff`_ and _`.iwd`_ files.
 
+**Q:** Can I play in a public lobby with this mod installed?
+
+**A:** Maps will fail to load if not everyone has the mod installed.
+
+**Q:** Can I launch Call of Duty: Black Ops - Multiplayer with this mod installed?
+
+**A:** No, it's not recommended to do so.
+
 ## Commands
 
 |Command|Description|Default Behaviour|Default Value|Example Player Config Command Usage|
