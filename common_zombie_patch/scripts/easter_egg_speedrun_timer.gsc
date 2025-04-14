@@ -26,11 +26,11 @@ easter_egg_speedrun_timer_text_started()
 
     for (;;)
     {
-        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
             level.easter_egg_speedrun_timer_text_started.alpha = 1;
         }
-        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {
             level.easter_egg_speedrun_timer_text_started.alpha = 0;
         }
@@ -55,11 +55,11 @@ easter_egg_speedrun_timer_count_started()
 
     for (;;)
     {
-        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
             level.easter_egg_speedrun_timer_count_started.alpha = 1;
         }
-        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {
             level.easter_egg_speedrun_timer_count_started.alpha = 0;
         }
@@ -125,11 +125,11 @@ easter_egg_speedrun_timer_count_finished()
 
     for (;;)
     {
-        if (getDvar("cg_renderSpeedrunTimer") == "1")
+        if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
             level.easter_egg_speedrun_timer_count_finished.alpha = 1;
         }
-        else if (getDvar("cg_renderSpeedrunTimer") == "0")
+        else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {
             level.easter_egg_speedrun_timer_count_finished.alpha = 0;
         }

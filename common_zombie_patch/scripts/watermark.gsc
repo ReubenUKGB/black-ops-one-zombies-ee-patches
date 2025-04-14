@@ -24,15 +24,15 @@ mod_watermark()
     mod_info.alignY = "bottom";
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
-    mod_info SetText("BO1: Zombies EE Patches v1.3");
+    mod_info SetText("Black Ops: Zombies EE Patches v1.3.1");
 
     for (;;)
     {
-        if (getDvar("cg_renderWatermark") == "1")
+        if (getDvar("cg_drawWatermark") == "1")
         {
             mod_info.alpha = 0.5;
         }
-        else if (getDvar("cg_renderWatermark") == "0")
+        else if (getDvar("cg_drawWatermark") == "0")
         {
             mod_info.alpha = 0;
         }

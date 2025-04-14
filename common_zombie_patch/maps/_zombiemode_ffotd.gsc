@@ -13,70 +13,26 @@ main_start()
 	//Disable friends list and dev list from spaceman name if we want
 	//setsaveddvar( "r_zombieNameAllowFriendsList", "1" );
 	//setsaveddvar( "r_zombieNameAllowDevList", "1" );
-	
-	//We can disable additional primary machines here on a per map basis
-	//just set level.zombie_additionalprimaryweapon_machine_origin to undefined and it will ignore it
-	
-	//Turn off 3 weapon perk machines for other maps based on dvars
-	disable_additionalprimaryweapon_machine_locations();
+	level thread points();
+
+
 }
 
+points()
+{
+	flag_wait("all_players_connected");
+
+	players = GetPlayers();
+
+    for (i = 0; i < players.size; i++) {
+		players[i] maps\_zombiemode_score::add_to_player_score(100000); //comment out for default behaviour
+	}
+}
 
 main_end()
 {
 	level thread onPlayerConnect();
 }
-
-
-disable_additionalprimaryweapon_machine_locations()
-{
-	enabled = 0;
-
-	switch ( Tolower( GetDvar( #"mapname" ) ) )
-	{
-	case "zombie_theater":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_theater" );
-		break;
-	case "zombie_pentagon":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_pentagon" );
-		break;
-	case "zombie_cosmodrome":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_cosmodrome" );
-		break;
-	case "zombie_coast":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_coast" );
-		break;
-	case "zombie_temple":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_temple" );
-		break;
-	case "zombie_moon":
-		enabled = 1;
-		break;
-	case "zombie_cod5_prototype":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_cod5_prototype" );
-		break;
-	case "zombie_cod5_asylum":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_cod5_asylum" );
-		break;
-	case "zombie_cod5_sumpf":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_cod5_sumpf" );
-		break;
-	case "zombie_cod5_factory":
-		enabled = GetDvarInt( #"scr_zm_extra_perk_cod5_factory" );
-		break;
-	}
-
-	if ( GetDvarInt( #"scr_zm_extra_perk_all" ) )
-	{
-		enabled = 1;
-	}
-
-	if ( !enabled )
-	{
-		level.zombie_additionalprimaryweapon_machine_origin = undefined;
-	}
-}
-
 
 onPlayerConnect()
 {
@@ -91,7 +47,6 @@ onPlayerConnect()
 		player thread scripts\watermark::main();
 	}
 }
-
 
 claymore_to_notsolid()
 {

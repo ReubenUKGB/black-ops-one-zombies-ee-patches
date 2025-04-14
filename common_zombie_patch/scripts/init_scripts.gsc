@@ -6,9 +6,9 @@ on_player_connect()
     {
         level waittill("connected", player);
 
-        player setClientDvar("cg_renderWatermark", "1");
+        player setClientDvar("cg_drawWatermark", "1");
         
-        player setClientDvar("cg_renderSpeedrunTimer", "1");
+        player setClientDvar("cg_drawSpeedrunTimer", "1");
 
         player thread scripts\watermark::mod_watermark();
     }

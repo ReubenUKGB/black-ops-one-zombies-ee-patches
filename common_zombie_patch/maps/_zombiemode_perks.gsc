@@ -198,7 +198,7 @@ default_vending_precaching()
 	if ( is_true( level.zombiemode_using_additionalprimaryweapon_perk ) )
 	{
 		PrecacheItem( "zombie_perk_bottle_additionalprimaryweapon" );
-		PrecacheShader( "specialty_extraprimaryweapon_zombies" );
+		PrecacheShader( "specialty_three_gun_zombies" );
 	}
 	
 	PrecacheShader( "specialty_juggernaut_zombies" );
@@ -1694,7 +1694,7 @@ perk_hud_create( perk )
 
 	case "specialty_additionalprimaryweapon_upgrade":
 	case "specialty_additionalprimaryweapon":
-		shader = "specialty_extraprimaryweapon_zombies";
+		shader = "specialty_three_gun_zombies";
 		break;
 		
 	default:
