@@ -13,20 +13,11 @@ main_start()
 	//Disable friends list and dev list from spaceman name if we want
 	//setsaveddvar( "r_zombieNameAllowFriendsList", "1" );
 	//setsaveddvar( "r_zombieNameAllowDevList", "1" );
-	level thread points();
-
-
 }
 
 points()
 {
 	flag_wait("all_players_connected");
-
-	players = GetPlayers();
-
-    for (i = 0; i < players.size; i++) {
-		players[i] maps\_zombiemode_score::add_to_player_score(100000); //comment out for default behaviour
-	}
 }
 
 main_end()
