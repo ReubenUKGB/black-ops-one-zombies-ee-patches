@@ -10,8 +10,8 @@
 - Adds Mule Kick back in when playing offline
 
 ## General Changes
-* Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
-* Added a fully functional Mule Kick back into zombie maps when not connected to the Call of Duty: Black Ops servers
+- Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed
+- Added a fully functional Mule Kick back into zombie maps when not connected to the Call of Duty: Black Ops servers
 
 ## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players
