@@ -2,15 +2,7 @@
 
 main()
 {
-    switch (GetDvar("mapname"))
-	{
-        case "zombie_coast":
-        case "zombie_cosmodrome":
-        case "zombie_temple":
-        case "zombie_moon":
-            thread scripts\init_scripts::on_player_connect();
-            break;
-	}
+    thread scripts\init_scripts::on_player_connect();
 }
 
 mod_watermark()

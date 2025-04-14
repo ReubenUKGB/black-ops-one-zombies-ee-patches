@@ -15,11 +15,6 @@ main_start()
 	//setsaveddvar( "r_zombieNameAllowDevList", "1" );
 }
 
-points()
-{
-	flag_wait("all_players_connected");
-}
-
 main_end()
 {
 	level thread onPlayerConnect();
