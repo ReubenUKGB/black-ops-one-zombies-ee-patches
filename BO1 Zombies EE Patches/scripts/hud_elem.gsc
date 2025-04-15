@@ -162,7 +162,7 @@ mod_watermark()
     mod_info.alignY = "bottom";
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
-    mod_info SetText("Black Ops: Zombies EE Patches v1.4");
+    mod_info SetText("Black Ops: Zombies EE Patches v1.4.1");
     mod_info.alpha = 0; 
 
     for (;;)
