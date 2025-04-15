@@ -13,14 +13,6 @@ main_start()
 	//Disable friends list and dev list from spaceman name if we want
 	//setsaveddvar( "r_zombieNameAllowFriendsList", "1" );
 	//setsaveddvar( "r_zombieNameAllowDevList", "1" );
-	
-    level.easter_egg_speedrun_time = 0;
-
-    level.easter_egg_speedrun_timer_text_started = undefined;
-
-    level.easter_egg_speedrun_timer_count_started = undefined;
-    
-    level.easter_egg_speedrun_timer_count_finished = undefined;
 }
 
 main_end()
