@@ -235,19 +235,19 @@ knock_on_door()
 	knock_trig PlaySound( "zmb_haxorz_suxorz" );
 	
 	level gargoyle_speaks( knock_trig ); // after power is hit anyone who walks by this will hear the guys behind the door
+
+	players = get_players();
+
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
+
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
+	}
 	
 	while( 1 )
 	{
 		knock_trig waittill( "damage", i_amt, e_inflictor, vec_direction, vec_point, mod_type );
-
-		players = get_players();
-
-		for(i=0; i < players.size; i++)
-		{
-			players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
-
-			players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
-		}
 
 		if( level.door_knock_vox_occurring )
 		{
