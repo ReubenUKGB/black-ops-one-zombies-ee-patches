@@ -156,6 +156,15 @@ watch_for_respawn()
 
 reward()
 {
+
+	level.easter_egg_speedrun_timer_count_started Destroy();
+
+	players = get_players();
+	
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
+	}
 	
 	level notify("temple_sidequest_achieved");
 
@@ -880,15 +889,6 @@ sidequest_done()
 		if( IsPlayer(who) && !IsDefined(who._has_anti115))
 		{
 			who._has_anti115 = true;
-			
-			level.easter_egg_speedrun_timer_count_started Destroy();
-
-			players = get_players();
-			
-			for(i=0; i < players.size; i++)
-			{
-				players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
-			}
 
 			who PlaySound( "zmb_meteor_activate" );
 			who thread reward();

@@ -965,15 +965,6 @@ soul_release( model, origin )
 	
 	model waittill( "death" );
 
-    level.easter_egg_speedrun_timer_count_started Destroy();
-
-	players = get_players();
-	
-	for(i=0; i < players.size; i++)
-	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
-	}
-	
 	level thread play_egg_vox( "vox_ann_egg6_success", "vox_gersh_egg6_success", 9 );
 	level thread wait_for_gersh_vox();
 	
@@ -1008,6 +999,15 @@ reward_wait()
 			( self UseButtonPressed() && self in_revive_trigger() ) )
 	{
 		wait( 1.0 ); 
+	}
+
+    level.easter_egg_speedrun_timer_count_started Destroy();
+
+	players = get_players();
+	
+	for(i=0; i < players.size; i++)
+	{
+		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
 	}
 
 	level thread maps\_zombiemode_powerups::minigun_weapon_powerup( self, 90 );
