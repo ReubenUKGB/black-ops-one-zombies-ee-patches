@@ -85,8 +85,6 @@ init()
 
 reward()
 {
-	level notify("moon_sidequest_achieved");
-
 	level.easter_egg_speedrun_timer_count_started Destroy();
 	
 	players = get_players();
@@ -95,6 +93,8 @@ reward()
 	{
 		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
 	}
+
+	level notify("moon_sidequest_achieved");
 	
 	players = get_players();
 	

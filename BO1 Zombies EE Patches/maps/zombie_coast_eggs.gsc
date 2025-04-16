@@ -2610,8 +2610,8 @@ capricorn()
 	flag_set( "dmf" );	
 	
 	level notify( "scrambled" );
-
-    level.easter_egg_speedrun_timer_count_started Destroy();
+	
+	level.easter_egg_speedrun_timer_count_started Destroy();
 
 	players = get_players();
 	
