@@ -1,17 +1,9 @@
 #include common_scripts\utility;
 
-fade_in_hud(hudElem, time, alpha)
+fade_hud(hudElem, time, alpha)
 {
     hudElem FadeOverTime(time);
     hudElem.alpha = alpha;
-
-    wait(time);
-}
-
-fade_out_hud(hudElem, time, alpha)
-{
-    hudElem FadeOverTime(time);
-    hudElem.alpha = 0;
 
     wait(time);
 }
@@ -34,11 +26,11 @@ easter_egg_speedrun_timer_text_started()
     {
         if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
-            thread fade_in_hud(easter_egg_speedrun_timer_text_started, 0.5, 1);
+            thread fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 1);
         }
         else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {   
-            thread fade_out_hud(easter_egg_speedrun_timer_text_started, 0.5, 0);
+            thread fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 0);
         }
         
         wait 0.1;
@@ -69,11 +61,11 @@ easter_egg_speedrun_timer_count_started()
     {
         if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
-            thread fade_in_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 1);
+            thread fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 1);
         }
         else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {   
-            thread fade_out_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 0);
+            thread fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 0);
         }
         
         wait 0.1;
@@ -140,11 +132,11 @@ easter_egg_speedrun_timer_count_finished()
     {
         if (getDvar("cg_drawSpeedrunTimer") == "1")
         {
-            thread fade_in_hud(easter_egg_speedrun_timer_count_finished, 0.5, 1);
+            thread fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 1);
         }
         else if (getDvar("cg_drawSpeedrunTimer") == "0")
         {   
-            thread fade_out_hud(easter_egg_speedrun_timer_count_finished, 0.5, 0);
+            thread fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 0);
         }
         
         wait 0.1;
@@ -169,11 +161,11 @@ mod_watermark()
     {
         if (getDvar("cg_drawWatermark") == "1")
         {
-            thread fade_in_hud(mod_info, 0.5, 0.5);
+            thread fade_hud(mod_info, 0.5, 0.5);
         }
         else if (getDvar("cg_drawWatermark") == "0")
         {   
-            thread fade_out_hud(mod_info, 0.5, 0);
+            thread fade_hud(mod_info, 0.5, 0);
         }
         
         wait 0.1;
