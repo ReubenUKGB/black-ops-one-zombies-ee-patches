@@ -80,6 +80,14 @@
 
 **A:** Any guide that shows how to bind keys to loading zombie maps via cfg commands will do.
 
+**Q:** How do I use the config commands?
+
+**A:** Any guide that shows how add config commands to _`config.cfg`_ in the _`players`_ folder will do.
+
+**Q:** How do I compile the mod from the source files?
+
+**A:** Any guide that shows how to use the Call of Duty: Black Ops Mod Tools will do.
+
 ## Commands
 
 |Command|Description|Default Behaviour|Default Value|Example Player Config Command Usage|
