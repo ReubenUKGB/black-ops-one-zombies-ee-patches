@@ -49,7 +49,7 @@ init()
 		level.packapunch_timeout = 15;
 	}
 
-	set_zombie_var( "zombie_perk_cost",					2000 );
+	//set_zombie_var( "zombie_perk_cost",					2000 );
 	if( level.mutators["mutator_susceptible"] )
 	{
 		set_zombie_var( "zombie_perk_juggernaut_health",	80 );
