@@ -13,6 +13,7 @@
 #include common_scripts\utility;
 #include maps\_zombiemode_utility; 
 #include maps\_zombiemode_sidequests;
+#include scripts\hud_elem;
 
 init()
 {
@@ -91,7 +92,7 @@ reward()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
+		players[i] thread easter_egg_speedrun_timer_count_finished();
 	}
 
 	level notify("moon_sidequest_achieved");
@@ -343,9 +344,9 @@ sidequest_logic()
 
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
+		players[i] thread easter_egg_speedrun_timer_text_started();
 
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
+		players[i] thread easter_egg_speedrun_timer_count_started();
 	}
 	
 	stage_start("sq", "osc");

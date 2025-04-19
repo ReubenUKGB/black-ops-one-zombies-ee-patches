@@ -1,5 +1,10 @@
 #include common_scripts\utility;
 
+speedrunTimer_enabled()
+{
+    return getDvarInt("cg_drawSpeedrunTimer") == 1;
+}
+
 fade_hud(hudElem, time, alpha)
 {
     hudElem FadeOverTime(time);
@@ -24,13 +29,13 @@ easter_egg_speedrun_timer_text_started()
 
     for (;;)
     {
-        if (getDvar("cg_drawSpeedrunTimer") == "1")
+        if (speedrunTimer_enabled())
         {
-            thread fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 1);
+            fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 1);
         }
-        else if (getDvar("cg_drawSpeedrunTimer") == "0")
+        else
         {   
-            thread fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 0);
+            fade_hud(easter_egg_speedrun_timer_text_started, 0.5, 0);
         }
         
         wait 0.1;
@@ -59,13 +64,13 @@ easter_egg_speedrun_timer_count_started()
 
     for (;;)
     {
-        if (getDvar("cg_drawSpeedrunTimer") == "1")
+        if (speedrunTimer_enabled())
         {
-            thread fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 1);
+            fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 1);
         }
-        else if (getDvar("cg_drawSpeedrunTimer") == "0")
+        else
         {   
-            thread fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 0);
+            fade_hud(level.easter_egg_speedrun_timer_count_started, 0.5, 0);
         }
         
         wait 0.1;
@@ -130,13 +135,13 @@ easter_egg_speedrun_timer_count_finished()
 
     for (;;)
     {
-        if (getDvar("cg_drawSpeedrunTimer") == "1")
+        if (speedrunTimer_enabled())
         {
-            thread fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 1);
+            fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 1);
         }
-        else if (getDvar("cg_drawSpeedrunTimer") == "0")
+        else
         {   
-            thread fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 0);
+            fade_hud(easter_egg_speedrun_timer_count_finished, 0.5, 0);
         }
         
         wait 0.1;
@@ -154,18 +159,21 @@ mod_watermark()
     mod_info.alignY = "bottom";
     mod_info.horzAlign = "left";
     mod_info.vertAlign = "bottom";
-    mod_info SetText("Black Ops: Zombies EE Patches v1.4.1");
+    mod_info SetText("Black Ops: Zombies Main Quest EE Patches v1.4.1");
     mod_info.alpha = 0; 
 
     for (;;)
     {
-        if (getDvar("cg_drawWatermark") == "1")
+
+        watermark = getDvarInt("cg_drawWatermark");
+
+        if (watermark == 1)
         {
-            thread fade_hud(mod_info, 0.5, 0.5);
+            fade_hud(mod_info, 0.5, 0.5);
         }
-        else if (getDvar("cg_drawWatermark") == "0")
+        else if (watermark == 0)
         {   
-            thread fade_hud(mod_info, 0.5, 0);
+            fade_hud(mod_info, 0.5, 0);
         }
         
         wait 0.1;

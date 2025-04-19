@@ -4,8 +4,8 @@ main()
 {
     switch (GetDvar("mapname"))
 	{
-        case "zombie_coast":
         case "zombie_cosmodrome":
+        case "zombie_coast":
         case "zombie_temple":
         case "zombie_moon":
             thread on_player_connect();

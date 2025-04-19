@@ -6,6 +6,7 @@
 #include maps\_music; 
 #include maps\_busing;
 #include maps\_zombiemode_audio;
+#include scripts\hud_elem;
 
 /*
 // Egg descriptions
@@ -240,9 +241,9 @@ knock_on_door()
 
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
+		players[i] thread easter_egg_speedrun_timer_text_started();
 
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
+		players[i] thread easter_egg_speedrun_timer_count_started();
 	}
 	
 	while( 1 )
@@ -2617,7 +2618,7 @@ capricorn()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
+		players[i] thread easter_egg_speedrun_timer_count_finished();
 	}
 	
 	// SCRIPT: AWARD THE ACHIEVEMENT AND STUFF
