@@ -72,6 +72,10 @@
 
 **A:** Maps will fail to load if not everyone has the mod installed.
 
+**Q:** Do I need to download Call of Duty: Black Ops - Multiplayer for this mod to work?
+
+**A:** Yes, in order to play some zombies maps it's necessary to download Call of Duty: Black Ops - Multiplayer.
+
 **Q:** Can I launch Call of Duty: Black Ops - Multiplayer with this mod installed?
 
 **A:** It's not recommended to do so.
