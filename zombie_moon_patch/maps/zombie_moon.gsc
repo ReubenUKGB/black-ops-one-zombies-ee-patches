@@ -1158,62 +1158,28 @@ precache_player_model_override()
 
 give_player_model_override( entity_num )
 {
-	if(!IsDefined(level._override_num_chars_connected))
+	switch( entity_num )
 	{
-		level._override_num_chars_connected = 0;
-	}
-	else
-	{
-		level._override_num_chars_connected ++;
-	}
-
-	if( IsDefined( self.zm_random_char ) )
-	{
-		entity_num = self.zm_random_char;
-		self.entity_num = entity_num;
-	}
-	else if(level._override_num_chars_connected == (GetNumExpectedPlayers() -1 ) )
-	{
-		self.zm_random_char = 3;
-		self.entity_num = 3;
-		entity_num = 3;
-	}
-	else
-	{
-		self.zm_random_char = level._override_num_chars_connected;
-		self.entity_num = level._override_num_chars_connected;
-		entity_num = level._override_num_chars_connected;
-	}
-
-	players = get_players();
-	
-	for(i = 0; i < players.size; i ++)
-	{
-		entnum = players[i] GetEntityNumber();	
-
-		switch( entnum )
-		{
-			case 0:
-				self.zm_random_char = 3;
-				self.entity_num = 3;
-				entity_num = 3;
-				break;
-			case 1:
-				self.zm_random_char = 0;
-				self.entity_num = 0;
-				entity_num = 0;
-				break;
-			case 2:
-				self.zm_random_char = 1;
-				self.entity_num = 1;
-				entity_num = 1;
-				break;
-			case 3:
-				self.zm_random_char = 2;
-				self.entity_num = 2;
-				entity_num = 2;
-				break;	
-		}
+		case 0:
+			self.zm_random_char = 3;
+			self.entity_num = 3;
+			entity_num = 3;
+			break;
+		case 1:
+			self.zm_random_char = 0;
+			self.entity_num = 0;
+			entity_num = 0;
+			break;
+		case 2:
+			self.zm_random_char = 1;
+			self.entity_num = 1;
+			entity_num = 1;
+			break;
+		case 3:
+			self.zm_random_char = 2;
+			self.entity_num = 2;
+			entity_num = 2;
+			break;	
 	}
 	
 	switch( entity_num )
