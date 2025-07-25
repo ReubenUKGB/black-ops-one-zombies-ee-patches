@@ -1167,7 +1167,9 @@ give_player_model_override( entity_num )
 		level._override_num_chars_connected ++;
 	}
 
-	if( IsDefined( self.zm_random_char ) && getPlayers().size != 1 )
+	players = GetPlayers();
+
+	if( IsDefined( self.zm_random_char ) && players.size != 1 )
 	{
 		switch( entity_num )
 		{
