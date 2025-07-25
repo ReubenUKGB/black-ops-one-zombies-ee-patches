@@ -1,16 +1,16 @@
 # Black Ops 1: Zombies Main Quest EE Patches (Legacy Mod Version)
 
-![zombieseepatches](https://github.com/user-attachments/assets/44caaa52-9d66-476b-9ae0-0a3d8b36bcb9)
+<img width="1920" height="1080" alt="zombieseepatches" src="https://github.com/user-attachments/assets/39fce947-09bf-459f-86a1-61f511339f53" />
 
 ## What this mod does
-- Enables the ability to complete the Easter eggs in solo or coop (without four players).
+- Enables the ability to complete the main quest Easter eggs in solo or coop Zombies (without four players).
   
-- Adds a Easter egg speedrun timer for the main Easter eggs.
+- Adds a Easter egg speedrun timer for the main quest Easter eggs.
 
 - Adds Mule Kick back in to every map when playing offline.
 
 ## General Changes
-- Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed.
+- Added a EE speedrun timer that activates when the first steps of the main quest Easter eggs are activated and stops when the last steps of the main Easter eggs are completed.
   
 - Added a fully functional Mule Kick back into zombie maps when not connected to the Call of Duty: Black Ops servers.
 
