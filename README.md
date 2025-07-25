@@ -1,4 +1,4 @@
-# Black Ops: Zombies EE Patches (Game_Mod Version)
+# Black Ops 1: Zombies Main Quest EE Patches (Game_Mod Version)
 
 ![zombieseepatches](https://github.com/user-attachments/assets/c0963bf3-9414-4762-bcdb-5dc131b10f31)
 
