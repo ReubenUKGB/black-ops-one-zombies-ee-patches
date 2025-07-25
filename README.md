@@ -10,7 +10,7 @@
 - Adds Mule Kick back in to every map when playing offline.
 
 ## General Changes
-- Added a EE speedrun timer that activates when the first steps of the main quest Easter eggs are activated and stops when the last steps of the main Easter eggs are completed.
+- Added a EE speedrun timer that activates when the first steps of the main quest Easter eggs are activated and stops when the last steps of the main quest Easter eggs are completed.
   
 - Added a fully functional Mule Kick back into zombie maps when not connected to the Call of Duty: Black Ops servers.
 
