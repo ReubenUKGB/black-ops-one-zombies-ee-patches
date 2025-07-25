@@ -1,14 +1,14 @@
 # Black Ops 1: Zombies Main Quest EE Patches (Game_Mod Version)
 
-![zombieseepatches](https://github.com/user-attachments/assets/c0963bf3-9414-4762-bcdb-5dc131b10f31)
+<img width="1920" height="1080" alt="zombieseepatches" src="https://github.com/user-attachments/assets/6527246f-0955-4cf6-b6f3-42af4aacc8f4" />
 
 ## What this mod does
-- Enables the ability to complete the Easter eggs in solo or coop (without four players).
+- Enables the ability to complete the Easter eggs in solo or coop Zombies (without four players).
   
-- Adds a Easter egg speedrun timer for the main Easter eggs.
+- Adds a Easter egg speedrun timer for the main quest Easter eggs.
 
 ## General Changes
-- Added a EE speedrun timer that activates when the first steps of the main Easter eggs are activated and stops when the last steps of the main Easter eggs are completed.
+- Added a EE speedrun timer that activates when the first steps of the main quest Easter eggs are activated and stops when the last steps of the main quest Easter eggs are completed.
 
 ## Ascension EE Changes
 - The Casimir Mechanism Easter egg now works with any amount of players.
