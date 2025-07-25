@@ -48,19 +48,19 @@
 
 **A:** Achievements can still be unlocked.
 
-**Q:** Do I still need to complete Easter eggs from previous maps in order to complete the Easter egg in Moon?
+**Q:** Do I still need to complete main quest Easter eggs from previous maps in order to complete the main quest Easter egg in Moon?
 
-**A:** Call of the Dead and Shangri-La Easter eggs need to be completed to do the Easter egg in Moon.
+**A:** Call of the Dead and Shangri-La main quest Easter eggs need to be completed to do the main quest Easter egg in Moon.
 
 **Q:** Does the mod support other versions of Call of Duty: Black Ops?
 
 **A:** Only the Steam version of the game is officially supported, although other versions may work.
 
-**Q:** Does this mod skip any steps of the Easter eggs?
+**Q:** Does this mod skip any steps of the main quest Easter eggs?
 
-**A:** No Easter egg steps are skipped.
+**A:** No main quest Easter egg steps are skipped.
 
-**Q:** Which guide do I use to help complete the Easter eggs with?
+**Q:** Which guide do I use to help complete the main quest Easter eggs with?
 
 **A:** Any guide will do so long as changes made by the mod are also followed.
 
