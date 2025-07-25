@@ -1,4 +1,4 @@
-# Black Ops: Zombies EE Patches (Legacy Mod Version)
+# Black Ops 1: Zombies Main Quest EE Patches (Legacy Mod Version)
 
 ![zombieseepatches](https://github.com/user-attachments/assets/44caaa52-9d66-476b-9ae0-0a3d8b36bcb9)
 
