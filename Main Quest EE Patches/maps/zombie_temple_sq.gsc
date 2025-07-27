@@ -713,73 +713,76 @@ init_gongs()
 init_sidequest()
 {
 	level._buttons_can_reset = true;
-	
+
 	if(!IsDefined(level._sidequest_firsttime))
 	{
 		back_to_the_future();
 		level._sidequest_firsttime = false;
 	}
-	
+
 	players = get_players();
-	
+
 	for(i = 0; i < players.size; i ++)
 	{
 		entnum = players[i] GetEntityNumber();
-		
+
 		if( IsDefined( players[i].zm_random_char ) )
 		{
 			entnum = players[i].zm_random_char;
 		}
 
-		if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		if((entnum == 3))
 		{
-			players[i] add_sidequest_icon("sq", "vril");
-			break;
+			if(maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+			{
+				players[i] add_sidequest_icon("sq", "vril");
+				break;
+			}
 		}
 	}
-	
+
 	maps\zombie_temple_sq_brock::create_radio(1);
-	
+
 	init_gongs();
-	
+
 	wall = GetEnt("sq_wall", "targetname");
 	wall SetModel("p_ztem_temple_wall_solid");
 	//wall Solid();
 
-	
+
 	crystals = GetEntArray("sq_crystals", "targetname");
-	
+
 	level._raised_crystals = [];
-	
+
 	for(i = 0; i < crystals.size; i ++)
 	{
 		level._raised_crystals[i] = 0;
 	}
-	
+
 	trap = GetEnt("sq_spiketrap", "targetname");
 	trap Show();
-	
+
 	flag_clear("radio_4_played");
 	flag_clear("radio_7_played");
 	flag_clear("radio_9_played");
 	flag_clear("meteorite_shrunk");
-	
+
 	meteorite = GetEnt("sq_meteorite", "targetname");
 	meteorite SetModel("p_ztem_meteorite");
 	meteorite Hide();
-	
+
 	if(!IsDefined(meteorite.original_origin))
 	{
 		meteorite.original_origin = meteorite.origin;
 		meteorite.original_angles = meteorite.angles;
 	}
-	
+
 	meteorite.origin = meteorite.original_origin;
 	meteorite.angles = meteorite.original_angles;
-	
+
 	anti115 = GetEnt("sq_anti_115", "targetname");
 	anti115 Show();
-	
+
 	level thread pap_watcher();
 }
 

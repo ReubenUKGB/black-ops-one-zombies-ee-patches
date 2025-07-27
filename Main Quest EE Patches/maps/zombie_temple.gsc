@@ -767,6 +767,15 @@ precache_player_model_override()
 
 give_player_model_override( entity_num )
 {
+	if(!IsDefined(level._override_num_chars_connected))
+	{
+		level._override_num_chars_connected = 0;
+	}
+	else
+	{
+		level._override_num_chars_connected ++;
+	}
+	
 	players = GetPlayers();
 
 	if( IsDefined( self.zm_random_char ) && players.size != 1 )
@@ -800,6 +809,12 @@ give_player_model_override( entity_num )
 		self.zm_random_char = 3;
 		self.entity_num = 3;
 		entity_num = 3;
+	}
+	else
+	{
+		self.zm_random_char = level._override_num_chars_connected;
+		self.entity_num = level._override_num_chars_connected;
+		entity_num = level._override_num_chars_connected;
 	}
 
 	switch( entity_num )
