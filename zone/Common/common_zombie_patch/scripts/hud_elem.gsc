@@ -3,7 +3,7 @@
 fade_hud(hudElem, time, alpha)
 {
     hudElem FadeOverTime(time);
-    hudElem.alpha = alpha;
+    hudElem.alpha = alpha; //fix Cannot set field of removed entity (when easter_egg_speedrun_timer_count_started is destroyed), look at code from my other t5 script
 
     wait(time);
 }

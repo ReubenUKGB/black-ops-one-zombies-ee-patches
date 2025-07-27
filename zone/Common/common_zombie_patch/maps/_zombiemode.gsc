@@ -6561,6 +6561,7 @@ set_sidequest_completed(id)
 			players[i] zombieStatSet( level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_solo_stat[id] ) + 1) );
 		}*/
 
+		//check if this works offline
 		if ( isdefined( level.zombie_sidequest_coop_stat[id] ) )
 		{
 			players[i] zombieStatSet( level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_coop_stat[id] ) + 1) );
