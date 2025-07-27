@@ -6488,7 +6488,7 @@ register_sidequest( id, solo_stat, solo_collectible, coop_stat, coop_collectible
 		}
 	}
 	else
-	{*/
+	{
 		// don't do stats stuff if it's not an online game
 		if ( level.systemLink || GetDvarInt( #"splitscreen_playerCount" ) == GetPlayers().size )
 		{
@@ -6497,7 +6497,7 @@ register_sidequest( id, solo_stat, solo_collectible, coop_stat, coop_collectible
 				level.zombie_sidequest_previously_completed[id] = HasCollectible( level.zombie_sidequest_coop_collectible[id] );
 			}
 			return;
-		}
+		}*/
 		
 		if ( !isdefined( level.zombie_sidequest_coop_stat[id] ) )
 		{
@@ -6543,7 +6543,7 @@ set_sidequest_completed(id)
 	level notify( "zombie_sidequest_completed", id );
 	level.zombie_sidequest_previously_completed[id] = true;
 
-	// don't do stats stuff if it's not an online game
+	/* don't do stats stuff if it's not an online game
 	if ( level.systemLink )
 	{
 		return; 
@@ -6551,7 +6551,7 @@ set_sidequest_completed(id)
 	if ( GetDvarInt( #"splitscreen_playerCount" ) == GetPlayers().size )
 	{
 		return;
-	}
+	}*/
 
 	players = get_players();
 	for ( i = 0; i < players.size; i++ )
