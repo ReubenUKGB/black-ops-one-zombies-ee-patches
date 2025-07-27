@@ -165,11 +165,11 @@ start_moon_sidequest()
 init_sidequest()
 {
 	players = get_players();
-	
+
 	level._all_previous_done = false;
-	
+
 	level._zombiemode_sidequest_icon_offset = -32;
-	
+
 	for(i = 0; i < players.size; i ++)
 	{
 		entnum = players[i] GetEntityNumber();
@@ -180,40 +180,38 @@ init_sidequest()
 			entnum = players[i].zm_random_char;
 		}
 
-		if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+		if((entnum == 3))
 		{
-			if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+			if(maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 			{
 				players[i] add_sidequest_icon("sq", "generator");
 				level._all_previous_done = true;
 				break;
 			}
-
-			break;
-		}
-		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("COTD"))
-		{
-			players[i] add_sidequest_icon("sq", "vril");
-			break;
-		}
-		else if((entnum == 3) maps\_zombiemode::is_sidequest_previously_completed("EOA"))
-		{
-			players[i] add_sidequest_icon("sq", "anti115");
-			break;
+			else if(maps\_zombiemode::is_sidequest_previously_completed("COTD"))
+			{
+				players[i] add_sidequest_icon("sq", "vril");
+				break;
+			}
+			else if(maps\_zombiemode::is_sidequest_previously_completed("EOA"))
+			{
+				players[i] add_sidequest_icon("sq", "anti115");
+				break;
+			}
 		}
 	}
-	
+
 	level thread tanks();
 	level thread cassimir();
 	level thread be();
-	
+
 	level thread maps\zombie_moon_sq_datalogs::init();
-	
+
 	if( 1 == GetDvarInt(#"scr_debug_launch"))
 	{
 		level thread rocket_test();
 	}
-	
+
 	level thread rocket_raise();
 }
 
