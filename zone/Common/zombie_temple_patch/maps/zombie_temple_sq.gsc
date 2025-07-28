@@ -64,6 +64,8 @@ init()
 	level._crystal_bounce_paths[4] = array(1,3,2,6,5, "R");
 	level._crystal_bounce_paths[5] = array(6,5,6,1,3,5, "R");
 	level._crystal_bounce_paths[6] = array(5,6,1,4,2,1,3, "M");
+
+	level.sundial_first_activated = false;
 	
 	PreCacheModel("p_ztem_crystal_and_holder");
 	PreCacheModel("p_ztem_crystal_holder");
@@ -416,10 +418,8 @@ sundial_monitor()
 		// Raise sundial.
 		
 		level._sundial_active = true;
-		
-		sundial_first_activated = false;
 
-		if(sundial_first_activated == false)
+		if(level.sundial_first_activated == false)
 		{
 			players = get_players();
 
@@ -430,7 +430,9 @@ sundial_monitor()
 				players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
 			}
 
-			sundial_first_activated = true;
+			IPrintLn("i proc");
+
+			level.sundial_first_activated = true;
 		}
 		
 		self playsound( "evt_sq_gen_transition_start" );
