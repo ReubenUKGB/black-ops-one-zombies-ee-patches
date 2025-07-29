@@ -85,9 +85,9 @@ main()
 	level.zombiemode_sidequest_init = ::temple_sidequest_of_awesome;
 
 	maps\_zombiemode::main();
-	
+
 	level thread maps\_zombiemode::register_sidequest( "COTD", "ZOMBIE_COAST_EGG_SOLO", 43, "ZOMBIE_COAST_EGG_COOP", 44 );
-	level thread maps\_zombiemode::register_sidequest( "EOA", undefined, undefined, "ZOMBIE_TEMPLE_SIDEQUEST", undefined );
+	level thread maps\_zombiemode::register_sidequest( "EOA", "ZOMBIE_TEMPLE_SIDEQUEST", 45, "ZOMBIE_TEMPLE_SIDEQUEST", 46 );
 	
 	level thread init_electric_switch();
 	

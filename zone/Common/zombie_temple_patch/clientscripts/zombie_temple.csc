@@ -58,6 +58,8 @@ main()
 
 	// TODO when gibs are set up
 	register_zombie_types();
+
+	level thread clientscripts\_zombiemode::register_sidequest(45, 46);
 	
 	// on player connect
 	OnPlayerConnect_Callback( ::temple_player_connect );
