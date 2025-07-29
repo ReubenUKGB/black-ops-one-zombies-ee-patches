@@ -3,7 +3,7 @@
 <img width="1920" height="1080" alt="zombieseepatches" src="https://github.com/user-attachments/assets/6527246f-0955-4cf6-b6f3-42af4aacc8f4" />
 
 ## What this mod does
-- Enables the ability to complete the Easter eggs in solo or coop Zombies (without four players).
+- Enables the ability to complete the main Easter eggs in solo or coop Zombies (without four players), even when playing offline.
   
 - Adds a Easter egg speedrun timer for the main quest Easter eggs.
 
