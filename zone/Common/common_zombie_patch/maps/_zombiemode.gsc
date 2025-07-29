@@ -6480,7 +6480,7 @@ register_sidequest( id, solo_stat, solo_collectible, coop_stat, coop_collectible
 	flag_wait( "all_players_spawned" );
 
 	level.zombie_sidequest_previously_completed[id] = false;
-	/*if ( flag( "solo_game" ) )
+	if ( flag( "solo_game" ) )
 	{
 		if ( IsDefined( level.zombie_sidequest_solo_collectible[id] ) )
 		{
@@ -6497,7 +6497,7 @@ register_sidequest( id, solo_stat, solo_collectible, coop_stat, coop_collectible
 				level.zombie_sidequest_previously_completed[id] = HasCollectible( level.zombie_sidequest_coop_collectible[id] );
 			}
 			return;
-		}*/
+		}
 		
 		if ( !isdefined( level.zombie_sidequest_coop_stat[id] ) )
 		{
@@ -6513,7 +6513,7 @@ register_sidequest( id, solo_stat, solo_collectible, coop_stat, coop_collectible
 				return;
 			}
 		}
-	//}
+	}
 }
 
 
@@ -6529,21 +6529,21 @@ set_sidequest_completed(id)
 	{
 		return;
 	}
-	
-	//if ( flag( "solo_game" ) )
-	//{
-	//	client_notify_str = "SQS";
-	//}
-	//else
-	//{
-		  client_notify_str = "SQC";
-	//}
+
+	if ( flag( "solo_game" ) )
+	{
+		client_notify_str = "SQS";
+	}
+	else
+	{
+		client_notify_str = "SQC";
+	}
 	clientnotify( client_notify_str ); // updates the collectibles value
 
 	level notify( "zombie_sidequest_completed", id );
 	level.zombie_sidequest_previously_completed[id] = true;
 
-	/* don't do stats stuff if it's not an online game
+	// don't do stats stuff if it's not an online game
 	if ( level.systemLink )
 	{
 		return; 
@@ -6551,21 +6551,19 @@ set_sidequest_completed(id)
 	if ( GetDvarInt( #"splitscreen_playerCount" ) == GetPlayers().size )
 	{
 		return;
-	}*/
+	}
 
 	players = get_players();
 	for ( i = 0; i < players.size; i++ )
 	{
-		/*if ( isdefined( level.zombie_sidequest_solo_stat[id] ) )
+		if ( isdefined( level.zombie_sidequest_solo_stat[id] ) )
 		{
 			players[i] zombieStatSet( level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_solo_stat[id] ) + 1) );
-		}*/
+		}
 
-		if ( isdefined( level.zombie_sidequest_coop_stat[id] ) )
+		if ( !flag( "solo_game" ) && isdefined( level.zombie_sidequest_coop_stat[id] ) )
 		{
 			players[i] zombieStatSet( level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_coop_stat[id] ) + 1) );
 		}
 	}
 }
-
-

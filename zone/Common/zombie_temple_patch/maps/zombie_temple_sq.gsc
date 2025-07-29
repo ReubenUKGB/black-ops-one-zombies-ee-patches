@@ -158,7 +158,6 @@ watch_for_respawn()
 
 reward()
 {
-
 	level.easter_egg_speedrun_timer_count_started Destroy();
 
 	players = get_players();
@@ -429,8 +428,6 @@ sundial_monitor()
 
 				players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
 			}
-
-			IPrintLn("i proc");
 
 			level.sundial_first_activated = true;
 		}
@@ -897,6 +894,7 @@ sidequest_done()
 
 			who PlaySound( "zmb_meteor_activate" );
 			who thread reward();
+			who setClientDvar("bg_templeEgg", "1");
 			who thread maps\_zombiemode_audio::create_and_play_dialog( "eggs", "quest8", undefined, 7 );
 			who thread delayed_loser_response();
 			break;
