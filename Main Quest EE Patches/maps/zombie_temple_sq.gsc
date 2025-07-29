@@ -167,7 +167,7 @@ reward()
 	{
 		players[i] thread easter_egg_speedrun_timer_count_finished();
 	}
-	
+
 	level notify("temple_sidequest_achieved");
 
 	self add_sidequest_icon("sq", "anti115");

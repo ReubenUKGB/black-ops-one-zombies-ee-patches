@@ -183,7 +183,7 @@ init_sidequest()
 
 		if((entnum == 3))
 		{
-			if ((maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA")) || (maps\_zombiemode::is_sidequest_previously_completed("COTD") && getDvar("bg_templeEgg") == "1"))
+			if ((maps\_zombiemode::is_sidequest_previously_completed("COTD") && maps\_zombiemode::is_sidequest_previously_completed("EOA")))
 			{
 				players[i] add_sidequest_icon("sq", "generator");
 				level._all_previous_done = true;
@@ -194,7 +194,7 @@ init_sidequest()
 				players[i] add_sidequest_icon("sq", "vril");
 				break;
 			}
-			else if(maps\_zombiemode::is_sidequest_previously_completed("EOA") || getDvar("bg_templeEgg") == "1")
+			else if(maps\_zombiemode::is_sidequest_previously_completed("EOA"))
 			{
 				players[i] add_sidequest_icon("sq", "anti115");
 				break;

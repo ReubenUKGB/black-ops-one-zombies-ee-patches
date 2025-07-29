@@ -120,8 +120,8 @@ main()
 	maps\_zombiemode::main();
 	
 	level thread maps\_zombiemode::register_sidequest( "COTD", "ZOMBIE_COAST_EGG_SOLO", 43, "ZOMBIE_COAST_EGG_COOP", 44 );
-	level thread maps\_zombiemode::register_sidequest( "EOA", undefined, undefined, "ZOMBIE_TEMPLE_SIDEQUEST", undefined );	
-	level thread maps\_zombiemode::register_sidequest( "MOON", undefined, undefined, "ZOMBIE_MOON_SIDEQUEST_TOTAL", undefined );	
+	level thread maps\_zombiemode::register_sidequest( "EOA", "ZOMBIE_TEMPLE_SIDEQUEST", 45, "ZOMBIE_TEMPLE_SIDEQUEST", 46 );	
+	level thread maps\_zombiemode::register_sidequest( "MOON", "ZOMBIE_MOON_SIDEQUEST_TOTAL", 47, "ZOMBIE_MOON_SIDEQUEST_TOTAL", 48 );	
 	
 	// init the weapons
 	maps\_sticky_grenade::init();
