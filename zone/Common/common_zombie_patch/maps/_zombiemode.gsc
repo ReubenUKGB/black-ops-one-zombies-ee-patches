@@ -6553,32 +6553,43 @@ set_sidequest_completed(id)
 		return;
 	}
 
+	//will trigger twice when pressing restart game	
 	players = get_players();
+
 	for ( i = 0; i < players.size; i++ )
 	{
-		if ( isdefined( level.zombie_sidequest_solo_stat[id] ) )
+		if (players.size == 1 && isDefined(level.zombie_sidequest_solo_stat[id]))
 		{
-			//do check if collectibles present, make sure it only updates by one, this if for offline to online
-			//check if more than one player has onlinegame 1
-			if(players.size == 1)
+			IPrintLn("SOLO GAME");
+
+			//todo: do check if collectibles present, make sure it only updates by one, this if for offline to online
+			//todo: check if more than one player has onlinegame 1
+			IPrintLn("STAT ID: " + level.zombie_sidequest_solo_stat[id]);
+			players[i] setClientDvar("onlinegame", "1");
+
+			players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]) + 1));
+
+			ee_solo_stat = players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]);
+
+			ee_coop_stat = players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]);
+						
+			wait(0.05); //maybe a cleaner way exists to skip the game detecting there's not enough players whilst onlinegame is enabled (maybe wait_network_frame/end?)
+
+			players[i] setClientDvar("onlinegame", "0");
+
+			IPrintLn("SOLO EE STAT: " + ee_solo_stat);
+
+			IPrintLn("COOP EE STAT: " + ee_coop_stat);
+
+		} else if (players.size > 1 && isDefined(level.zombie_sidequest_solo_stat[id]) && isDefined(level.zombie_sidequest_coop_stat[id]))
+		{
+			IPrintLn("coop game");
+			if (level.zombie_sidequest_solo_stat[id] == "ZOMBIE_COAST_EGG_SOLO")
 			{
-				players[i] setClientDvar("onlinegame", "1");
-
-				players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]) + 1));
-				players[i] zombieStatSet(level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]) + 1));
-
-				ee_coop_solo_stat = players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]);
-				ee_coop_stat = players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]);
-							
-				wait(0.05);
-
-				players[i] setClientDvar("onlinegame", "0");
+				players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_solo_stat[id]) + 1));
 			}
-		}
 
-		if ( !flag( "solo_game" ) && isdefined( level.zombie_sidequest_coop_stat[id] ) )
-		{
-			players[i] zombieStatSet( level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_coop_stat[id] ) + 1) );
+			players[i] zombieStatSet(level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]) + 1));
 		}
 	}
 }
