@@ -24,9 +24,5 @@ luna_letters_spawn()
 		level.lander_letters[ "n" ].origin += (0, 100, 100);
 
 		level.lander_letters[ "a" ].origin += (-1975, 1250, 100);
-
-		IPrintLn(level.lander_letters[ "l" ].origin);
-		IPrintLn(level.lander_letters[ "n" ].origin);
-		IPrintLn(level.lander_letters[ "a" ].origin);
 	}
 }

@@ -6560,11 +6560,8 @@ set_sidequest_completed(id)
 	{
 		if (players.size == 1 && isDefined(level.zombie_sidequest_solo_stat[id]))
 		{
-			IPrintLn("SOLO GAME");
-
 			//todo: do check if collectibles present, make sure it only updates by one, this if for offline to online
 			//todo: check if more than one player has onlinegame 1
-			IPrintLn("STAT ID: " + level.zombie_sidequest_solo_stat[id]);
 			players[i] setClientDvar("onlinegame", "1");
 
 			players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]) + 1));
@@ -6577,13 +6574,8 @@ set_sidequest_completed(id)
 
 			players[i] setClientDvar("onlinegame", "0");
 
-			IPrintLn("SOLO EE STAT: " + ee_solo_stat);
-
-			IPrintLn("COOP EE STAT: " + ee_coop_stat);
-
 		} else if (players.size > 1 && isDefined(level.zombie_sidequest_solo_stat[id]) && isDefined(level.zombie_sidequest_coop_stat[id]))
 		{
-			IPrintLn("coop game");
 			if (level.zombie_sidequest_solo_stat[id] == "ZOMBIE_COAST_EGG_SOLO")
 			{
 				players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_solo_stat[id]) + 1));
