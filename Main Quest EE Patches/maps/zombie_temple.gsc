@@ -86,8 +86,8 @@ main()
 
 	maps\_zombiemode::main();
 
-	level thread maps\_zombiemode::register_sidequest( "COTD", "ZOMBIE_COAST_EGG_SOLO", 43, "ZOMBIE_COAST_EGG_COOP", 44 );
-	level thread maps\_zombiemode::register_sidequest( "EOA", "ZOMBIE_TEMPLE_SIDEQUEST", 45, "ZOMBIE_TEMPLE_SIDEQUEST", 46 );
+	level thread maps\_zombiemode::register_sidequest( "COTD", undefined, 43, "ZOMBIE_COAST_EGG_COOP", 44 );
+	level thread maps\_zombiemode::register_sidequest( "EOA", undefined, 45, "ZOMBIE_TEMPLE_SIDEQUEST", 46 );
 	
 	level thread init_electric_switch();
 	
@@ -471,6 +471,7 @@ init_weapons_locker()
 setup_water_physics()
 {
 	flag_wait( "all_players_connected" );
+	
 	players = GetPlayers();
 	for (i = 0; i < players.size; i++)
 	{
