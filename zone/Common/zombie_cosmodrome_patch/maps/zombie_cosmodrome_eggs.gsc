@@ -6,6 +6,7 @@
 #include maps\_music; 
 #include maps\_busing;
 #include maps\_zombiemode_audio;
+#include scripts\hud_elem;
 
 //###########################
 // Description of Easter Eggs
@@ -178,9 +179,9 @@ teleport_target_event()
 
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
+		players[i] thread easter_egg_speedrun_timer_text_started();
 
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
+		players[i] thread easter_egg_speedrun_timer_count_started();
 	}
 
     level thread play_egg_vox( "vox_ann_egg1_success", "vox_gersh_egg1", 1 );
@@ -978,7 +979,7 @@ reward_wait()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
+		players[i] thread easter_egg_speedrun_timer_count_finished();
 	}
 
 	level thread maps\_zombiemode_powerups::minigun_weapon_powerup( self, 90 );

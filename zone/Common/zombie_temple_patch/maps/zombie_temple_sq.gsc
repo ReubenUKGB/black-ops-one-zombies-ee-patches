@@ -13,6 +13,7 @@
 #include common_scripts\utility;
 #include maps\_zombiemode_utility; 
 #include maps\_zombiemode_sidequests;
+#include scripts\hud_elem;
 
 /*delete_sq_ents(name)
 {
@@ -164,7 +165,7 @@ reward()
 	
 	for(i=0; i < players.size; i++)
 	{
-		players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_finished();
+		players[i] thread easter_egg_speedrun_timer_count_finished();
 	}
 
 	level notify("temple_sidequest_achieved");
@@ -424,9 +425,9 @@ sundial_monitor()
 
 			for(i=0; i < players.size; i++)
 			{
-				players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_text_started();
+				players[i] thread easter_egg_speedrun_timer_text_started();
 
-				players[i] thread scripts\hud_elem::easter_egg_speedrun_timer_count_started();
+				players[i] thread easter_egg_speedrun_timer_count_started();
 			}
 
 			level.sundial_first_activated = true;
