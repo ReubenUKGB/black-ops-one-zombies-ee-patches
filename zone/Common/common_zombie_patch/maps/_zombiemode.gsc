@@ -6573,10 +6573,6 @@ set_sidequest_completed(id)
 				wait(0.05);
 
 				players[i] setClientDvar("onlinegame", "0");
-				
-				IPrintLn(id);
-				IPrintLn("EE Solo Stat: " + ee_coop_solo_stat);
-				IPrintLn("EE Coop Stat: " + ee_coop_stat);
 			}
 		}
 
