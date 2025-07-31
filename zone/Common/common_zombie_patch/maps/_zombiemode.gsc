@@ -6558,7 +6558,26 @@ set_sidequest_completed(id)
 	{
 		if ( isdefined( level.zombie_sidequest_solo_stat[id] ) )
 		{
-			players[i] zombieStatSet( level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet( level.zombie_sidequest_solo_stat[id] ) + 1) );
+			//do check if collectibles present, make sure it only updates by one, this if for offline to online
+			//check if more than one player has onlinegame 1
+			if(players.size == 1)
+			{
+				players[i] setClientDvar("onlinegame", "1");
+
+				players[i] zombieStatSet(level.zombie_sidequest_solo_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]) + 1));
+				players[i] zombieStatSet(level.zombie_sidequest_coop_stat[id], (players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]) + 1));
+
+				ee_coop_solo_stat = players[i] zombieStatGet(level.zombie_sidequest_solo_stat[id]);
+				ee_coop_stat = players[i] zombieStatGet(level.zombie_sidequest_coop_stat[id]);
+							
+				wait(0.05);
+
+				players[i] setClientDvar("onlinegame", "0");
+				
+				IPrintLn(id);
+				IPrintLn("EE Solo Stat: " + ee_coop_solo_stat);
+				IPrintLn("EE Coop Stat: " + ee_coop_stat);
+			}
 		}
 
 		if ( !flag( "solo_game" ) && isdefined( level.zombie_sidequest_coop_stat[id] ) )
