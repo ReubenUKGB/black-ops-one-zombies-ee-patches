@@ -1,0 +1,6 @@
+*.iwi filter=lfs diff=lfs merge=lfs -text
+zone/Common/common_zombie_patch/material_properties/* filter=lfs diff=lfs merge=lfs -text
+zone/Common/common_zombie_patch/materials/* filter=lfs diff=lfs merge=lfs -text
+zone/Common/common_zombie_patch/xmodel/* filter=lfs diff=lfs merge=lfs -text
+zone/Common/common_zombie_patch/xmodelparts/* filter=lfs diff=lfs merge=lfs -text
+zone/Common/common_zombie_patch/xmodelsurfs/* filter=lfs diff=lfs merge=lfs -text
