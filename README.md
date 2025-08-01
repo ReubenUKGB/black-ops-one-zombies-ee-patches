@@ -1,3 +1,10 @@
+# This repository has moved
+
+This project is no longer maintained on GitHub.
+
+Please visit the new repository on Codeberg:
+[https://codeberg.org/ReubenUKGB/black-ops-one-zombies-main-quest-ee-patches](https://codeberg.org/ReubenUKGB/black-ops-one-zombies-main-quest-ee-patches)
+
 # Black Ops: Zombies Main Quest EE Patches (Legacy Mod Version)
 
 <img width="1920" height="1080" alt="zombieseepatches" src="https://github.com/user-attachments/assets/39fce947-09bf-459f-86a1-61f511339f53" />
